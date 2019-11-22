@@ -54,14 +54,21 @@
 			   				<div class=\"description\">{{channel.description}}</div>\
 							<div class=\"media-panel\">\
 								<podcast-feed-item \
-												v-for=\"(item, index) in channel.media\" \
-												v-bind:item=\"item\" \
+												v-for=\"(item, index) in channel.media\"\
+												v-bind:item=\"item\"\
 												v-bind:index=\"index\"\
-												v-bind:key=\"item.guid\" \
+												v-bind:key=\"item.guid\"\
+												v-on:downloadTriggered=\"downloadMedia(item)\"\
 												 ></podcast-feed-item>\
 							</div>\
 						</div>\
-					</div>'
+					</div>',
+				methods: {
+					downloadMedia: function(x) {
+						console.warn("wrong")
+					}
+
+				}
 		})
 		Vue.component('podcast-feed-channel', {
 		  props: ['channel'],
@@ -79,7 +86,14 @@
 		})
 		Vue.component('podcast-feed-item', {
 		  props: ['item'],
-		  template: '<li>{{ item.guid }}</li>'
+		  template: "<div class=\"item\" v-on:click=\"$emit(\'downloadTriggered\')\">\
+		  				<div class=\"download-button-holder\">\
+		  					<span class=\"download-symbol download-button\" />\
+		  				</div>\
+        				<div class=\"item-title\">{{ item.title }}</div>\
+						<div class=\"item-description\">{{item.description}}</div>\
+        			<div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
+    			</div>"
 		  		//{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \
 		})
 
@@ -96,6 +110,11 @@
 		  el: '#app',		  
 		  data: {
 		    podcastFeedsList: feeds
+		  },
+		  methods: {
+		  	downloadMedia: function (item) {
+				console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+		  	}
 		  }
 		})
 	</script>

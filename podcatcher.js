@@ -71,31 +71,6 @@ function assignIds(object_list) {
 	return object_list.map((item, index) => Object.assign({}, item, {id: index}))
 }
 
-function feedToHtml(feed) {
-	return "<div class=\"feed-panel\">\
-				<div class=\"title\">" + feed.title + "</div>" +
-			   "<div class=\"description\">" + feed.description + "</div>" +
-			   "<div class=\"feed-image\">" + 
-					"<img src=\"" + feed.image.url + "\"\>" +
-				"</div>" +
-				"<div class=\"media-panel\">" +
-					feed.media.slice(0, 5).map((item) => itemMap(item)).join("") +
-				"</div>" +
-			"</div>";
-}
-
-function itemMap(item) {	
-    return "<div class=\"item\" onClick=\"download(\'https://cors-anywhere.herokuapp.com/" + item.media.url + "\')\">" +
-        	"<div class=\"item-title\">" + item.title + "</div>" +
-        	"<div class=\"item-description\">" + item.description + "</div>" +
-        	"<div class=\"item-enclosure\"><a href=\"" + item.media.url + "\">link</a></div>" +
-    	"</div>";
-}
-
-function updateFeedDisplay(feeds) {
-	return feeds.map((feed) => feed.slice(0, 5).map((channel) => feedToHtml(channel)).join()).join()
-}
-
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
     module.exports =  { buildItem, processChannel, processRSS, feedToHtml, itemMap, updateFeedDisplay, assignIds };
 }
