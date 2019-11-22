@@ -8,14 +8,7 @@
 		<div v-for="(podcast, index) in podcastFeedsList"
   					v-bind:index="index"
   					v-bind:key="podcast.id">
-  					<div class="feed-panel">
-						<div class="title">{{podcast.title}}</div>
-			   			<div class="description">{{podcast.description}}</div>
-					    <div class="feed-image">
-						</div>
-						<div class="media-panel">
-						</div>
-					</div>
+  					<podcast v-bind:channel="podcast"></podcast>
 		</div>
 	</div>
 	<script type="text/javascript" src="./vue.js"></script>
@@ -23,17 +16,17 @@
 	<script type="text/javascript" src="./parse-xml.min.js"></script>
 	<script type="text/javascript" src="./test-xhr-response.js"></script>
 	<script type="text/javascript">
-		Vue.component('podcasts', {
+		Vue.component('podcast', {
 		  props: ['channel'],
 		  template: '<div class=\"feed-panel\">\
 						<div class=\"title\">{{ channel.title }}</div>\
 			   			<div class=\"description\">{{channel.description}}</div>\
 					    <div class=\"feed-image\">\
+							<img v-bind:src=\"channel.image.url\" \>\
 						</div>\
 						<div class=\"media-panel\">\
 						</div>\
 					</div>'
-							//<img v-bind:src=\"channel.image.url\" \>\
 							//{{ //channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \
 		})
 		Vue.component('podcast-feed-channel', {
@@ -47,6 +40,8 @@
 
 		let feeds = processRSS(parseXml(getMockResponse()).children[0])
 		feeds = assignIds([feeds[0],feeds[0],feeds[0],feeds[0],feeds[0],feeds[0]])
+
+		feeds = feeds.map((feed) => Object.assign({}, feed, {image: Object.assign({}, feed.image, {url: `http://127.0.0.1:5000/send/${feed.id}.img`})}))
 
 		const vm = new Vue({
 		  el: '#app',		  
