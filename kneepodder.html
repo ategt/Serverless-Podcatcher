@@ -58,17 +58,10 @@
 												v-bind:item=\"item\"\
 												v-bind:index=\"index\"\
 												v-bind:key=\"item.guid\"\
-												v-on:downloadTriggered=\"downloadMedia(item)\"\
 												 ></podcast-feed-item>\
 							</div>\
 						</div>\
-					</div>',
-				methods: {
-					downloadMedia: function(x) {
-						console.warn("wrong")
-					}
-
-				}
+					</div>'
 		})
 		Vue.component('podcast-feed-channel', {
 		  props: ['channel'],
@@ -86,15 +79,20 @@
 		})
 		Vue.component('podcast-feed-item', {
 		  props: ['item'],
-		  template: "<div class=\"item\" v-on:click=\"$emit(\'downloadTriggered\')\">\
+		  template: "<div class=\"item\" v-on:click=\"downloadMedia\">\
 		  				<div class=\"download-button-holder\">\
 		  					<span class=\"download-symbol download-button\" />\
 		  				</div>\
         				<div class=\"item-title\">{{ item.title }}</div>\
 						<div class=\"item-description\">{{item.description}}</div>\
         			<div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
-    			</div>"
-		  		//{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \
+    			</div>",
+		  		//{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \\
+		  	methods: {
+					downloadMedia: function() {
+						this.$root.itemDownloader(this.item)
+					}
+				}
 		})
 
 		let feeds = processRSS(parseXml(getMockResponse()).children[0])
@@ -112,7 +110,7 @@
 		    podcastFeedsList: feeds
 		  },
 		  methods: {
-		  	downloadMedia: function (item) {
+		  	itemDownloader: function (item) {
 				console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
 		  	}
 		  }
