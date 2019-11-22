@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serverless Podcatcher</title>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript" src="./vue.js"></script>
+	<script type="text/javascript" src="./podcatcher.js"></script>
+	<script type="text/javascript" src="./parse-xml.min.js"></script>
+	<script type="text/javascript" src="./test-xhr-response.js"></script>
+	<script type="text/javascript">
+		Vue.component('podcast-feed-channel', {
+		  props: ['channel'],
+		  template: '<li>{{ channel.text }}</li>'
+		})
+		Vue.component('podcast-feed-item', {
+		  props: ['item'],
+		  template: '<li>{{ item.text }}</li>'
+		})
+		const feed = processRSS(parseXml(getMockResponse()).children[0])
+		const vm = new Vue({
+		  el: '#app',		  
+		  data: {
+		    podcastFeedsList: [	
+		    	feed, 
+		    	feed 
+		   	]
+		  }
+		})
+	</script>
+</body>
+</html>
