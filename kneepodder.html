@@ -5,11 +5,18 @@
 </head>
 <body>
 	<div id="app">
-		<podcasts v-for="(podcast, index) in podcastFeedsList"
-		  			v-bind:channel="podcast"
+		<div v-for="(podcast, index) in podcastFeedsList"
   					v-bind:index="index"
   					v-bind:key="podcast.id">
-		</podcasts>
+  					<div class="feed-panel">
+						<div class="title" v-bind:name="podcast.title">{{ podcast.title }}</div>
+			   			<div class="description">{{podcast.description}}</div>
+					    <div class="feed-image">
+						</div>
+						<div class="media-panel">
+						</div>
+					</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="./vue.js"></script>
 	<script type="text/javascript" src="./podcatcher.js"></script>
@@ -38,12 +45,20 @@
 		  template: '<li>{{ item.text }}</li>'
 		})
 		const feed = processRSS(parseXml(getMockResponse()).children[0])
+
+		const feed1 = Object.assign({}, feed, {id:1})
+    	const feed2 = Object.assign({}, feed, {id:2})
+    	const feed3 = Object.assign({}, feed, {id:3})
+    	const feed4 = Object.assign({}, feed, {id:4})
+
 		const vm = new Vue({
 		  el: '#app',		  
 		  data: {
 		    podcastFeedsList: [	
-		    	feed, 
-		    	feed 
+		    	feed1, 
+		    	feed2,
+		    	feed3, 
+		    	feed4 
 		   	]
 		  }
 		})
