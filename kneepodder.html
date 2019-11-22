@@ -4,12 +4,31 @@
 	<title>Serverless Podcatcher</title>
 </head>
 <body>
-	<div id="app"></div>
+	<div id="app">
+		<podcasts v-for="(podcast, index) in podcastFeedsList"
+		  			v-bind:channel="podcast"
+  					v-bind:index="index"
+  					v-bind:key="podcast.id">
+		</podcasts>
+	</div>
 	<script type="text/javascript" src="./vue.js"></script>
 	<script type="text/javascript" src="./podcatcher.js"></script>
 	<script type="text/javascript" src="./parse-xml.min.js"></script>
 	<script type="text/javascript" src="./test-xhr-response.js"></script>
 	<script type="text/javascript">
+		Vue.component('podcasts', {
+		  props: ['channel'],
+		  template: '<div class=\"feed-panel\">\
+						<div class=\"title\">{{ channel.title }}</div>\
+			   			<div class=\"description\">{{channel.description}}</div>\
+					    <div class=\"feed-image\">\
+						</div>\
+						<div class=\"media-panel\">\
+						</div>\
+					</div>'
+							//<img v-bind:src=\"channel.image.url\" \>\
+							//{{ //channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \
+		})
 		Vue.component('podcast-feed-channel', {
 		  props: ['channel'],
 		  template: '<li>{{ channel.text }}</li>'
