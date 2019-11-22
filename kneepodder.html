@@ -41,6 +41,7 @@
 	<script type="text/javascript" src="./vue.js"></script>
 	<script type="text/javascript" src="./podcatcher.js"></script>
 	<script type="text/javascript" src="./parse-xml.min.js"></script>
+	<script type="text/javascript" src="./download.min.js"></script>
 	<script type="text/javascript" src="./test-xhr-response.js"></script>
 	<script type="text/javascript">
 		Vue.component('podcast', {
@@ -111,7 +112,9 @@
 		  },
 		  methods: {
 		  	itemDownloader: function (item) {
-				console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+		  		//download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+				//console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+				download("http://127.0.0.1:5000/uploads/torsocks-master.zip")
 		  	}
 		  }
 		})
