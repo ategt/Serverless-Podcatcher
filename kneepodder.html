@@ -9,7 +9,7 @@
   					v-bind:index="index"
   					v-bind:key="podcast.id">
   					<div class="feed-panel">
-						<div class="title" v-bind:name="podcast.title">{{ podcast.title }}</div>
+						<div class="title">{{podcast.title}}</div>
 			   			<div class="description">{{podcast.description}}</div>
 					    <div class="feed-image">
 						</div>
@@ -44,22 +44,14 @@
 		  props: ['item'],
 		  template: '<li>{{ item.text }}</li>'
 		})
-		const feed = processRSS(parseXml(getMockResponse()).children[0])
 
-		const feed1 = Object.assign({}, feed, {id:1})
-    	const feed2 = Object.assign({}, feed, {id:2})
-    	const feed3 = Object.assign({}, feed, {id:3})
-    	const feed4 = Object.assign({}, feed, {id:4})
+		let feeds = processRSS(parseXml(getMockResponse()).children[0])
+		feeds = assignIds([feeds[0],feeds[0],feeds[0],feeds[0],feeds[0],feeds[0]])
 
 		const vm = new Vue({
 		  el: '#app',		  
 		  data: {
-		    podcastFeedsList: [	
-		    	feed1, 
-		    	feed2,
-		    	feed3, 
-		    	feed4 
-		   	]
+		    podcastFeedsList: feeds
 		  }
 		})
 	</script>

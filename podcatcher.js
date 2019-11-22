@@ -67,6 +67,10 @@ function processRSS(rss) {
 	return rss.children.filter((child)=>child.type=="element").map((child) => processChannel(child));
 }
 
+function assignIds(object_list) {
+	return object_list.map((item, index) => Object.assign({}, item, {id: index}))
+}
+
 function feedToHtml(feed) {
 	return "<div class=\"feed-panel\">\
 				<div class=\"title\">" + feed.title + "</div>" +
@@ -78,7 +82,7 @@ function feedToHtml(feed) {
 					feed.media.slice(0, 5).map((item) => itemMap(item)).join("") +
 				"</div>" +
 			"</div>";
-};
+}
 
 function itemMap(item) {	
     return "<div class=\"item\" onClick=\"download(\'https://cors-anywhere.herokuapp.com/" + item.media.url + "\')\">" +
@@ -93,5 +97,5 @@ function updateFeedDisplay(feeds) {
 }
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
-    module.exports =  { buildItem, processChannel, processRSS, feedToHtml, itemMap, updateFeedDisplay };
+    module.exports =  { buildItem, processChannel, processRSS, feedToHtml, itemMap, updateFeedDisplay, assignIds };
 }
