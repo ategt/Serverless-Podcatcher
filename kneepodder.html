@@ -41,6 +41,7 @@
 	<script type="text/javascript" src="./vue.js"></script>
 	<script type="text/javascript" src="./podcatcher.js"></script>
 	<script type="text/javascript" src="./parse-xml.min.js"></script>
+	<script type="text/javascript" src="./axios.min.js"></script>
 	<script type="text/javascript" src="./download.min.js"></script>
 	<script type="text/javascript" src="./test-xhr-response.js"></script>
 	<script type="text/javascript">
@@ -95,27 +96,52 @@
 					}
 				}
 		})
+		const myPodcasts = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
+		                        "https://feeds.megaphone.fm/buck-sexton-show",
+		                        "http://escapepod.org/feed/"
+		    ];
 
-		let feeds = processRSS(parseXml(getMockResponse()).children[0])
-		feeds = assignIds([feeds[0],feeds[0],feeds[0],feeds[0],feeds[0],feeds[0]])
 
-		feeds = feeds.map((feed) => Object.assign({}, feed, {image: Object.assign({}, feed.image, {url: `http://127.0.0.1:5000/send/${feed.id}.img`})}))
+		//let feeds = processRSS(parseXml(getMockResponse()).children[0])
+		//feeds = assignIds([feeds[0],feeds[0],feeds[0],feeds[0],feeds[0],feeds[0]])
 
-		feeds.forEach((feed) => {
-			feed.media = assignIds(feed.media)
-		})
+		//feeds = feeds.map((feed) => Object.assign({}, feed, {image: Object.assign({}, feed.image, {url: `http://127.0.0.1:5000/send/${feed.id}.img`})}))
+
+		//feeds.forEach((feed) => {
+			//feed.media = assignIds(feed.media)
+		//})
 
 		const vm = new Vue({
 		  el: '#app',		  
 		  data: {
-		    podcastFeedsList: feeds
+		    podcastFeedsList: new Array()
 		  },
 		  methods: {
 		  	itemDownloader: function (item) {
-		  		//download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+		  		download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
 				//console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
-				download("http://127.0.0.1:5000/uploads/torsocks-master.zip")
+				//download("http://127.0.0.1:5000/uploads/torsocks-master.zip")
 		  	}
+		  },
+		  mounted () {
+			myPodcasts.forEach(function(cast_url){
+		    		axios
+			          .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+  	      			  .then(
+					function(response) {
+					  const rss_document = parseXml(response.data);
+  					  let feed = processRSS(rss_document.children[0]);
+				          feed = assignIds([feed])[0]
+					  feed[0].media = assignIds(feed[0].media)
+					  //feed.media = assignIds(feed.media)
+					   //response => (this.info = response))
+					  vm.podcastFeedsList.push(feed)
+					  //this.podcastFeedsList = assignIds(this.podcastFeedsList)
+					  //this.podcastFeedsList.forEach((feed) => {
+						//feed.media = assignIds(feed.media)
+  					  //})
+					});
+			});
 		  }
 		})
 	</script>
