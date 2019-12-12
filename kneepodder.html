@@ -49,11 +49,13 @@
 		  props: ['channel'],
 		  template: '<div class=\"feed-panel\">\
 					    <div class=\"feed-image-panel\">\
-							<img class=\"feed-image\" v-bind:src=\"channel.image.url\" \>\
+					    	<div class=\"\" v-if=\"channel.image\">\
+								<img class=\"feed-image\" v-bind:src=\"channel.image.url\" ></img>\
+							</div>\
 						</div>\
 						<div>\
 							<div class=\"title\">{{ channel.title }}</div>\
-			   				<div class=\"description\">{{channel.description}}</div>\
+							<div class=\"description\" v-html=\"channel.description\"></div>\
 							<div class=\"media-panel\">\
 								<podcast-feed-item \
 												v-for=\"(item, index) in channel.media\"\
@@ -64,6 +66,7 @@
 							</div>\
 						</div>\
 					</div>'
+			   				//<div class=\"description\">{{channel.description}}</div>\
 		})
 		Vue.component('podcast-feed-channel', {
 		  props: ['channel'],
@@ -73,11 +76,12 @@
 						</div>\
 						<div>\
 							<div class=\"title\">{{ channel.title }}</div>\
-			   				<div class=\"description\">{{channel.description}}</div>\
+							<div class=\"description\" v-html=\"channel.description\"></div>\
 							<div class=\"media-panel\">\
 							</div>\
 						</div>\
 					</div>'
+			   				//<div class=\"description\">{{channel.description}}</div>\
 		})
 		Vue.component('podcast-feed-item', {
 		  props: ['item'],
@@ -86,9 +90,10 @@
 		  					<span class=\"download-symbol download-button\" />\
 		  				</div>\
         				<div class=\"item-title\">{{ item.title }}</div>\
-						<div class=\"item-description\">{{item.description}}</div>\
+						<div class=\"item-description\" v-html=\"item.description\"></div>\
         			<div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
     			</div>",
+    			//<div class=\"item-description\">{{item.description}}</div>\
 		  		//{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \\
 		  	methods: {
 					downloadMedia: function() {
@@ -126,16 +131,18 @@
 		  mounted () {
 			myPodcasts.forEach(function(cast_url){
 		    		axios
-			          .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+			          //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+			          .get("http://127.0.0.1:5000/send/drinkin.xml")
   	      			  .then(
 					function(response) {
 					  const rss_document = parseXml(response.data);
   					  let feed = processRSS(rss_document.children[0]);
-				          feed = assignIds([feed])[0]
+  					  feed[0].id = vm.podcastFeedsList.length + 1;
+				          //feed = assignIds([feed])[0]
 					  feed[0].media = assignIds(feed[0].media)
 					  //feed.media = assignIds(feed.media)
 					   //response => (this.info = response))
-					  vm.podcastFeedsList.push(feed)
+					  vm.podcastFeedsList = vm.podcastFeedsList.concat(feed)
 					  //this.podcastFeedsList = assignIds(this.podcastFeedsList)
 					  //this.podcastFeedsList.forEach((feed) => {
 						//feed.media = assignIds(feed.media)
