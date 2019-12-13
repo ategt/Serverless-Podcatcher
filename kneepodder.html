@@ -1,156 +1,186 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Serverless Podcatcher</title>
-	<style type="text/css">
-		.feed-image {
-			width: 50px;
-		}
-		.feed-panel {
-    		display: flex;
-    		margin: 10px;
-		}
-		.feed-image-panel {
-			display: flex;
-		}
-		.feed-image {
-		    width: 71px;
-			align-content: center;
-	   		align-self: center;
-	    	padding: 10px;
-	    	display: block;
-		}
-		.title {
-			text-align: center;
-    		text-decoration: underline;
-    		font-size: x-large;
-		}
-		.description {
-			padding: 3px;
-		}
-	</style>
+    <title>Serverless Podcatcher</title>
+    <style type="text/css">
+        .feed-image {
+            width: 50px;
+        }
+        .feed-panel {
+            display: flex;
+            margin: 10px;
+        }
+        .feed-image-panel {
+            display: flex;
+        }
+        .feed-image {
+            width: 71px;
+            align-content: center;
+            align-self: center;
+            padding: 10px;
+            display: block;
+        }
+        .title {
+            text-align: center;
+            text-decoration: underline;
+            font-size: x-large;
+        }
+        .description {
+            padding: 3px;
+        }
+        .item {
+            border: 1px gray solid;
+            max-width: 15%;
+            padding: 5px;
+            display: block;
+            margin: 5px;
+        }
+        .item-description {
+            height: 9.6em;
+            overflow: hidden;
+            margin: 5px 0px;
+            width: 12em;
+        }
+        .item-enclosure {
+            text-align-last: center;
+            border: 1px lightgray solid;
+            background-color: lightgrey;
+        }
+        .item-title {
+            height: 2.3em;
+            overflow: hidden;
+        }
+        .media-panel {
+            display: flex;
+        }
+        a {
+            display: block;
+            color: black;
+            border: 1px darkgrey solid;
+        }
+    </style>
 </head>
 <body>
-	<div id="app">
-		<div v-for="(podcast, index) in podcastFeedsList"
-  					v-bind:index="index"
-  					v-bind:key="podcast.id">
-  					<podcast v-bind:channel="podcast"></podcast>
-		</div>
-	</div>
-	<script type="text/javascript" src="./vue.js"></script>
-	<script type="text/javascript" src="./podcatcher.js"></script>
-	<script type="text/javascript" src="./parse-xml.min.js"></script>
-	<script type="text/javascript" src="./axios.min.js"></script>
-	<script type="text/javascript" src="./download.min.js"></script>
-	<script type="text/javascript" src="./test-xhr-response.js"></script>
-	<script type="text/javascript">
-		Vue.component('podcast', {
-		  props: ['channel'],
-		  template: '<div class=\"feed-panel\">\
-					    <div class=\"feed-image-panel\">\
-					    	<div class=\"\" v-if=\"channel.image\">\
-								<img class=\"feed-image\" v-bind:src=\"channel.image.url\" ></img>\
-							</div>\
-						</div>\
-						<div>\
-							<div class=\"title\">{{ channel.title }}</div>\
-							<div class=\"description\" v-html=\"channel.description\"></div>\
-							<div class=\"media-panel\">\
-								<podcast-feed-item \
-												v-for=\"(item, index) in channel.media\"\
-												v-bind:item=\"item\"\
-												v-bind:index=\"index\"\
-												v-bind:key=\"item.guid\"\
-												 ></podcast-feed-item>\
-							</div>\
-						</div>\
-					</div>'
-			   				//<div class=\"description\">{{channel.description}}</div>\
-		})
-		Vue.component('podcast-feed-channel', {
-		  props: ['channel'],
-		  template: '<div class=\"feed-panel\">\
-					    <div class=\"feed-image-panel\">\
-							<img class=\"feed-image\" v-bind:src=\"channel.image.url\" \>\
-						</div>\
-						<div>\
-							<div class=\"title\">{{ channel.title }}</div>\
-							<div class=\"description\" v-html=\"channel.description\"></div>\
-							<div class=\"media-panel\">\
-							</div>\
-						</div>\
-					</div>'
-			   				//<div class=\"description\">{{channel.description}}</div>\
-		})
-		Vue.component('podcast-feed-item', {
-		  props: ['item'],
-		  template: "<div class=\"item\" v-on:click=\"downloadMedia\">\
-		  				<div class=\"download-button-holder\">\
-		  					<span class=\"download-symbol download-button\" />\
-		  				</div>\
-        				<div class=\"item-title\">{{ item.title }}</div>\
-						<div class=\"item-description\" v-html=\"item.description\"></div>\
-        			<div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
-    			</div>",
-    			//<div class=\"item-description\">{{item.description}}</div>\
-		  		//{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \\
-		  	methods: {
-					downloadMedia: function() {
-						this.$root.itemDownloader(this.item)
-					}
-				}
-		})
-		const myPodcasts = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
-		                        "https://feeds.megaphone.fm/buck-sexton-show",
-		                        "http://escapepod.org/feed/"
-		    ];
+    <div id="app">
+        <div v-for="(podcast, index) in podcastFeedsList"
+                    v-bind:index="index"
+                    v-bind:key="podcast.id">
+                    <podcast v-bind:channel="podcast"></podcast>
+        </div>
+    </div>
+    <script type="text/javascript" src="./vue.js"></script>
+    <script type="text/javascript" src="./podcatcher.js"></script>
+    <script type="text/javascript" src="./parse-xml.min.js"></script>
+    <script type="text/javascript" src="./axios.min.js"></script>
+    <script type="text/javascript" src="./download.min.js"></script>
+    <script type="text/javascript" src="./test-xhr-response.js"></script>
+    <script type="text/javascript">
+        Vue.component('podcast', {
+          props: ['channel'],
+          template: '<div class=\"feed-panel\">\
+                        <div class=\"feed-image-panel\">\
+                            <div class=\"\" v-if=\"channel.image\">\
+                                <img class=\"feed-image\" v-bind:src=\"channel.image.url\" ></img>\
+                            </div>\
+                        </div>\
+                        <div>\
+                            <div class=\"title\">{{ channel.title }}</div>\
+                            <div class=\"description\" v-html=\"channel.description\"></div>\
+                            <div class=\"media-panel\">\
+                                <podcast-feed-item \
+                                                v-for=\"(item, index) in channel.media\"\
+                                                v-bind:item=\"item\"\
+                                                v-bind:index=\"index\"\
+                                                v-bind:key=\"item.guid\"\
+                                                 ></podcast-feed-item>\
+                            </div>\
+                        </div>\
+                    </div>'
+                            //<div class=\"description\">{{channel.description}}</div>\
+        })
+        Vue.component('podcast-feed-channel', {
+          props: ['channel'],
+          template: '<div class=\"feed-panel\">\
+                        <div class=\"feed-image-panel\">\
+                            <img class=\"feed-image\" v-bind:src=\"channel.image.url\" \>\
+                        </div>\
+                        <div>\
+                            <div class=\"title\">{{ channel.title }}</div>\
+                            <div class=\"description\" v-html=\"channel.description\"></div>\
+                            <div class=\"media-panel\">\
+                            </div>\
+                        </div>\
+                    </div>'
+                            //<div class=\"description\">{{channel.description}}</div>\
+        })
+        Vue.component('podcast-feed-item', {
+          props: ['item'],
+          template: "<div class=\"item\" v-on:click=\"downloadMedia\">\
+                        <div class=\"download-button-holder\">\
+                            <span class=\"download-symbol download-button\" />\
+                        </div>\
+                        <div class=\"item-title\">{{ item.title }}</div>\
+                        <div class=\"item-description\" v-html=\"item.description\"></div>\
+                    <div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
+                </div>",
+                //<div class=\"item-description\">{{item.description}}</div>\
+                //{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \\
+            methods: {
+                    downloadMedia: function() {
+                        this.$root.itemDownloader(this.item)
+                    }
+                }
+        })
+        const myPodcasts = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
+                                "https://feeds.megaphone.fm/buck-sexton-show",
+                                "http://escapepod.org/feed/"
+            ];
 
 
-		//let feeds = processRSS(parseXml(getMockResponse()).children[0])
-		//feeds = assignIds([feeds[0],feeds[0],feeds[0],feeds[0],feeds[0],feeds[0]])
+        //let feeds = processRSS(parseXml(getMockResponse()).children[0])
+        //feeds = assignIds([feeds[0],feeds[0],feeds[0],feeds[0],feeds[0],feeds[0]])
 
-		//feeds = feeds.map((feed) => Object.assign({}, feed, {image: Object.assign({}, feed.image, {url: `http://127.0.0.1:5000/send/${feed.id}.img`})}))
+        //feeds = feeds.map((feed) => Object.assign({}, feed, {image: Object.assign({}, feed.image, {url: `http://127.0.0.1:5000/send/${feed.id}.img`})}))
 
-		//feeds.forEach((feed) => {
-			//feed.media = assignIds(feed.media)
-		//})
+        //feeds.forEach((feed) => {
+            //feed.media = assignIds(feed.media)
+        //})
 
-		const vm = new Vue({
-		  el: '#app',		  
-		  data: {
-		    podcastFeedsList: new Array()
-		  },
-		  methods: {
-		  	itemDownloader: function (item) {
-		  		download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
-				//console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
-				//download("http://127.0.0.1:5000/uploads/torsocks-master.zip")
-		  	}
-		  },
-		  mounted () {
-			myPodcasts.forEach(function(cast_url){
-		    		axios
-			          //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
-			          .get("http://127.0.0.1:5000/send/drinkin.xml")
-  	      			  .then(
-					function(response) {
-					  const rss_document = parseXml(response.data);
-  					  let feed = processRSS(rss_document.children[0]);
-  					  feed[0].id = vm.podcastFeedsList.length + 1;
-				          //feed = assignIds([feed])[0]
-					  feed[0].media = assignIds(feed[0].media)
-					  //feed.media = assignIds(feed.media)
-					   //response => (this.info = response))
-					  vm.podcastFeedsList = vm.podcastFeedsList.concat(feed)
-					  //this.podcastFeedsList = assignIds(this.podcastFeedsList)
-					  //this.podcastFeedsList.forEach((feed) => {
-						//feed.media = assignIds(feed.media)
-  					  //})
-					});
-			});
-		  }
-		})
-	</script>
+        const vm = new Vue({
+          el: '#app',         
+          data: {
+            podcastFeedsList: new Array()
+          },
+          methods: {
+            itemDownloader: function (item) {
+                download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+                //console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+                //download("http://127.0.0.1:5000/uploads/torsocks-master.zip")
+            }
+          },
+          mounted () {
+            myPodcasts.forEach(function(cast_url){
+                    axios
+                      .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+                      //.get("http://127.0.0.1:5000/send/drinkin.xml")
+                      .then(
+                    function(response) {
+                      const rss_document = parseXml(response.data);
+                      let feed = processRSS(rss_document.children[0]);
+                      feed[0].id = vm.podcastFeedsList.length + 1;
+                          //feed = assignIds([feed])[0]
+                      feed[0].media = assignIds(feed[0].media)
+                      //feed.media = assignIds(feed.media)
+                       //response => (this.info = response))
+                      vm.podcastFeedsList = vm.podcastFeedsList.concat(feed)
+                      //this.podcastFeedsList = assignIds(this.podcastFeedsList)
+                      //this.podcastFeedsList.forEach((feed) => {
+                        //feed.media = assignIds(feed.media)
+                      //})
+                    });
+            });
+          }
+        })
+    </script>
 </body>
 </html>
