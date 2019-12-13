@@ -145,7 +145,6 @@
                             </div>\
                         </div>\
                     </div>'
-                            //<div class=\"description\">{{channel.description}}</div>\
         })
         Vue.component('podcast-feed-channel', {
           props: ['channel'],
@@ -160,7 +159,6 @@
                             </div>\
                         </div>\
                     </div>'
-                            //<div class=\"description\">{{channel.description}}</div>\
         })
         Vue.component('problem', {
           props: ['issue'],
@@ -196,7 +194,6 @@
                         <div class=\"item-description\" v-html=\"item.description\"></div>\
                     <div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
                 </div>",
-                //<div class=\"item-description\">{{item.description}}</div>\
                 //{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \\
             methods: {
                     downloadMedia: function() {
@@ -209,16 +206,6 @@
                                 "http://escapepod.org/feed/"
             ];
 
-
-        //let feeds = processRSS(parseXml(getMockResponse()).children[0])
-        //feeds = assignIds([feeds[0],feeds[0],feeds[0],feeds[0],feeds[0],feeds[0]])
-
-        //feeds = feeds.map((feed) => Object.assign({}, feed, {image: Object.assign({}, feed.image, {url: `http://127.0.0.1:5000/send/${feed.id}.img`})}))
-
-        //feeds.forEach((feed) => {
-            //feed.media = assignIds(feed.media)
-        //})
-
         const vm = new Vue({
           el: '#app',         
           data: {
@@ -228,29 +215,19 @@
           methods: {
             itemDownloader: function (item) {
                 download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
-                //console.log(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
-                //download("http://127.0.0.1:5000/uploads/torsocks-master.zip")
             },
             feedRefresher: function(cast_url){
                     axios
-                      .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
-                      //.get("http://127.0.0.1:5000/send/drinkin.xml")
+                      //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+                      .get("http://127.0.0.1:5000/send/drinkin.xml")
                       .then(
                         function(response) {
                           const rss_document = parseXml(response.data);
                           let feed = processRSS(rss_document.children[0]);
                           feed[0].id = vm.podcastFeedsList.length + 1;
-                              //feed = assignIds([feed])[0]
                           feed[0].media = assignIds(feed[0].media)
-                          //feed.media = assignIds(feed.media)
-                           //response => (this.info = response))
                           vm.podcastFeedsList = vm.podcastFeedsList.concat(feed)
-                          //this.podcastFeedsList = assignIds(this.podcastFeedsList)
-                          //this.podcastFeedsList.forEach((feed) => {
-                            //feed.media = assignIds(feed.media)
-                          //})
                         }).catch(function(error) {
-                          //console.error(error);
                           const oldErrors = vm.podcastErrorsList.filter((lerror) => lerror.url === cast_url);
                           if (oldErrors.length == 0) {
                             vm.podcastErrorsList = vm.podcastErrorsList.concat({url:cast_url, error:error, id: vm.podcastErrorsList.length + 1});
@@ -258,9 +235,7 @@
                             const position = vm.podcastErrorsList.indexOf(oldErrors[0]);
                             const ammendedError = Object.assign({}, oldErrors[0], {error:error});
                             Vue.set(vm.podcastErrorsList, position, ammendedError)
-                            //vm.podcastErrorsList = vm.podcastErrorsList.filter((lerror) => lerror.url !== cast_url).concat(ammendedError);
                           }
-                          //vm.podcastErrorsList = vm.podcastErrorsList.concat({url:cast_url, error:error, id: vm.podcastErrorsList.length + 1});
                         });
                       }
           },
