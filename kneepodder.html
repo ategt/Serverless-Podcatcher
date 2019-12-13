@@ -34,12 +34,16 @@
             padding: 5px;
             display: block;
             margin: 5px;
+
+            min-width: 10em;
+            display: inline-grid;
+            height: fit-content;
         }
         .item-description {
             height: 9.6em;
             overflow: hidden;
             margin: 5px 0px;
-            width: 12em;
+            /*width: 12em;*/
         }
         .item-enclosure {
             text-align-last: center;
@@ -51,7 +55,11 @@
             overflow: hidden;
         }
         .media-panel {
-            display: flex;
+            display: flow-root;
+            height: 26em;
+            padding: 2px;
+            /* background-color: blue; */
+            overflow: overlay;
         }
         a {
             display: block;
@@ -218,8 +226,8 @@
             },
             feedRefresher: function(cast_url){
                     axios
-                      //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
-                      .get("http://127.0.0.1:5000/send/drinkin.xml")
+                      .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+                      //.get("http://127.0.0.1:5000/send/drinkin.xml")
                       .then(
                         function(response) {
                           const rss_document = parseXml(response.data);
