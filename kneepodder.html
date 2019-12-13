@@ -62,10 +62,15 @@
 </head>
 <body>
     <div id="app">
-        <div v-for="(podcast, index) in podcastFeedsList"
-                    v-bind:index="index"
-                    v-bind:key="podcast.id">
-                    <podcast v-bind:channel="podcast"></podcast>
+        <div v-if="podcastFeedsList.length">
+            <div v-for="(podcast, index) in podcastFeedsList"
+                        v-bind:index="index"
+                        v-bind:key="podcast.id">
+                        <podcast v-bind:channel="podcast"></podcast>
+            </div>
+        </div>
+        <div class="nothing-yet" v-else>
+            <p>Cool loading screen...</p>
         </div>
     </div>
     <script type="text/javascript" src="./vue.js"></script>
@@ -164,21 +169,23 @@
                       .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
                       //.get("http://127.0.0.1:5000/send/drinkin.xml")
                       .then(
-                    function(response) {
-                      const rss_document = parseXml(response.data);
-                      let feed = processRSS(rss_document.children[0]);
-                      feed[0].id = vm.podcastFeedsList.length + 1;
-                          //feed = assignIds([feed])[0]
-                      feed[0].media = assignIds(feed[0].media)
-                      //feed.media = assignIds(feed.media)
-                       //response => (this.info = response))
-                      vm.podcastFeedsList = vm.podcastFeedsList.concat(feed)
-                      //this.podcastFeedsList = assignIds(this.podcastFeedsList)
-                      //this.podcastFeedsList.forEach((feed) => {
-                        //feed.media = assignIds(feed.media)
-                      //})
-                    });
-            });
+                        function(response) {
+                          const rss_document = parseXml(response.data);
+                          let feed = processRSS(rss_document.children[0]);
+                          feed[0].id = vm.podcastFeedsList.length + 1;
+                              //feed = assignIds([feed])[0]
+                          feed[0].media = assignIds(feed[0].media)
+                          //feed.media = assignIds(feed.media)
+                           //response => (this.info = response))
+                          vm.podcastFeedsList = vm.podcastFeedsList.concat(feed)
+                          //this.podcastFeedsList = assignIds(this.podcastFeedsList)
+                          //this.podcastFeedsList.forEach((feed) => {
+                            //feed.media = assignIds(feed.media)
+                          //})
+                        }).catch(function(error) {
+                          //console.error(error);
+                        });
+                      });
           }
         })
     </script>
