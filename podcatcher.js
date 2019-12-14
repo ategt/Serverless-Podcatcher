@@ -6,8 +6,6 @@ function buildItem(itemElements) {
         } else {
         	if ( element.children.length > 0) {
 				itemObj[element.name] = element.children[0].text;
-        	} else {
-        		//console.log(element)
         	}
         }
 	});

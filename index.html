@@ -1,129 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple Vue</title>
+    <title>Serverless Podcatcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
-	<div id="app">
-	  {{ message }}
-	</div>
-
-	<div id="app-2">
-	  <span v-bind:title="message">
-	    Hover your mouse over me for a few seconds
-	    to see my dynamically bound title!
-	  </span>
-	</div>
-
-	<div id="app-3">
-	  <span v-if="seen">Now you see me</span>
-	</div>
-
-	<div id="app-4">
-	  <ol>
-	    <li v-for="todo in todos">
-	      {{ todo.text }}
-	    </li>
-	  </ol>
-	</div>
-
-	<div id="app-5">
-	  <p>{{ message }}</p>
-	  <button v-on:click="reverseMessage">Reverse Message</button>
-	</div>
-	<div id="app-6">
-	  <p>{{ message }}</p>
-	  <input v-model="message">
-	</div>
-
-<div id="app-7">
-  <ol>
-    <!-- Create an instance of the todo-item component -->
-    <!--
-      Now we provide each todo-item with the todo object
-      it's representing, so that its content can be dynamic.
-      We also need to provide each component with a "key",
-      which will be explained later.
-    -->
-    <todo-item
-      v-for="item in groceryList"
-      v-bind:todo="item"
-      v-bind:key="item.id"
-    ></todo-item>
-  </ol>
-</div>	<!-- development version, includes helpful console warnings -->
-	<script src="./vue.js"></script>
-	<script type="text/javascript">
-		var app = new Vue({
-		  el: '#app',
-		  data: {
-		    message: 'Hello Vue!'
-		  }
-		})
-
-		var app2 = new Vue({
-		  el: '#app-2',
-		  data: {
-		    message: 'You loaded this page on ' + new Date().toLocaleString()
-		  }
-		})
-
-		var app3 = new Vue({
-		  el: '#app-3',
-		  data: {
-		    seen: true
-		  }
-		})
-
-		var app4 = new Vue({
-		  el: '#app-4',
-		  data: {
-		    todos: [
-		      { text: 'Learn JavaScript' },
-		      { text: 'Learn Vue' },
-		      { text: 'Build something awesome' }
-		    ]
-		  }
-		})
-
-		var app5 = new Vue({
-		  el: '#app-5',
-		  data: {
-		    message: 'Hello Vue.js!'
-		  },
-		  methods: {
-		    reverseMessage: function () {
-		      this.message = this.message.split('').reverse().join('')
-		    }
-		  }
-		})
-
-		var app6 = new Vue({
-		  el: '#app-6',
-		  data: {
-		    message: 'Hello Vue!'
-		  }
-		})
-
-		// Define a new component called todo-item
-		Vue.component('todo-item', {
-		  // The todo-item component now accepts a
-		  // "prop", which is like a custom attribute.
-		  // This prop is called todo.
-		  props: ['todo'],
-		  template: '<li>{{ todo.text }}</li>'
-		})
-
-		var app7 = new Vue({
-		  el: '#app-7',
-		  data: {
-		    groceryList: [
-		      { id: 0, text: 'Vegetables' },
-		      { id: 1, text: 'Cheese' },
-		      { id: 2, text: 'Whatever else humans are supposed to eat' }
-		    ]
-		  }
-		})
-	</script>
+    <div id="app">
+        <div v-if="podcastFeedsList.length | podcastErrorsList.length">
+            <div v-for="(podcast, index) in podcastFeedsList"
+                        v-bind:index="index"
+                        v-bind:key="podcast.id">
+                        <podcast v-bind:channel="podcast"></podcast>
+            </div>
+        </div>
+        <div class="nothing-yet" v-else>
+            <p>Cool loading screen...</p>
+        </div>
+        <div class="regular-issue-panel">
+            <div class="regular-issue-panel-spacer">
+            </div>
+            <div class="issue-list" v-if="podcastErrorsList.length">
+                <div v-for="(problem, index) in podcastErrorsList"
+                    v-bind:index="index"
+                    v-bind:key="problem.id">
+                        <problem v-bind:issue="problem"></problem>
+                </div>
+            </div>
+        </div>
+        <div class="add-feed-panel">
+          <div class="add-feed-form-spacer"></div>
+          <add-podcast-feed-url></add-podcast-feed-url>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@rgrove/parse-xml@2.0.1/dist/umd/parse-xml.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios@0.19.0/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/rndme/download/master/download.min.js"></script>
+    <script type="text/javascript" src="./podcatcher.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
