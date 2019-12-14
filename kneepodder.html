@@ -125,27 +125,36 @@
         }
         .add-url-form {
           display: flex;
+          align-items: center;
+          text-align: center;
+          align-content: center;
         }
         .add-feed-panel {
           text-align: center;
+          margin: 1.5em;
         }
         .add-url-form-input {
           border-radius: 3px;
           outline: none;
-          border: 1px solid black;
+          border: 3px solid darkgrey;
           background-color: aliceblue;
           padding: 0.2em 0.5em;
+          width: inherit;
+          border-radius: 9px;
+          height: inherit;
         }
         .add-podcast-feed-button {
           background-color: lightgrey;
           padding: 0.2em 2.5em;
           margin: 0em 1.5em;
+          width: 11em;
           color: #646c73;
-          border-radius: 12px;
+          border-radius: 9px;
           border: 1px solid #646c73;
         }
         .add-url-form-input-div {
-
+          width: -webkit-fill-available;
+          height: inherit;
         }
         .add-url-form-subpanel {
           display: flex;
@@ -274,18 +283,39 @@
                 }
         })
         Vue.component('add-podcast-feed-url', {
-          props: ['url'],
+          //props: ['url'],
+          // data: {
+          //   url: funtion() {
+          //     return "";
+          //   },
+          // },
+          data: function() {
+            return {
+              newFeedUrl: '',
+            }
+          },
           template: "<div class=\"add-url-form\">\
             <div class=\"add-url-form-subpanel\">\
               <div class=\"add-url-form-input-div\">\
-                <input class=\"add-url-form-input\" v-model=\"url\" placeholder=\"Feed URL To Be Added\"></input>\
+                <input class=\"add-url-form-input\" v-model=\"newFeedUrl\" placeholder=\"Feed URL To Be Added\"></input>\
               </div>\
-              <div class=\"add-podcast-feed-button\">\
+              <div class=\"add-podcast-feed-button\" v-on:click=\"addFeed\">\
                 Add Podcast\
               </div>\
             </div>\
           </div>\
-          "
+          ",
+          methods: {
+                  addFeed: function() {
+                    this.$root.addPodcastURL(this.newFeedUrl);
+                  },
+          },
+          // computed: {
+          //         url: function () {
+          //           // return this.size.trim().toLowerCase()
+          //           return 7
+          //         }
+          // }
         })
 
         const podcastURLsTAG = "ServerlessPodcastingURLList";
@@ -304,6 +334,7 @@
             podcastFeedsList: new Array(),
             podcastErrorsList: new Array(),
             myPodcasts: myPodcastsStorage ? JSON.parse(myPodcastsStorage) : defaultPodcastURLs,
+            //newFeedUrl: '',
           },
           methods: {
             addPodcastURL: function (url) {
@@ -356,7 +387,14 @@
           },
           mounted () {
             myPodcasts.forEach(this.feedRefresher);
-          }
+          },
+          watch: {
+            // whenever question changes, this function will run
+            newFeedUrl: function (newValue, oldValue) {
+              //this.answer = 'Waiting for you to stop typing...'
+              //this.debouncedGetAnswer()
+            },
+          },
         })
     </script>
 </body>
