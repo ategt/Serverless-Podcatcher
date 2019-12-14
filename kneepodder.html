@@ -123,6 +123,33 @@
           display: block;
           font-size: xx-large;
         }
+        .add-url-form {
+          display: flex;
+        }
+        .add-feed-panel {
+          text-align: center;
+        }
+        .add-url-form-input {
+          border-radius: 3px;
+          outline: none;
+          border: 1px solid black;
+          background-color: aliceblue;
+          padding: 0.2em 0.5em;
+        }
+        .add-podcast-feed-button {
+          background-color: lightgrey;
+          padding: 0.2em 2.5em;
+          margin: 0em 1.5em;
+          color: #646c73;
+          border-radius: 12px;
+          border: 1px solid #646c73;
+        }
+        .add-url-form-input-div {
+
+        }
+        .add-url-form-subpanel {
+          display: flex;
+        }
     </style>
 </head>
 <body>
@@ -143,6 +170,9 @@
                         v-bind:key="problem.id">
                         <problem v-bind:issue="problem"></problem>
             </div>
+        </div>
+        <div class="add-feed-panel">
+          <add-podcast-feed-url></add-podcast-feed-url>
         </div>
     </div>
     <script type="text/javascript" src="./vue.js"></script>
@@ -246,7 +276,14 @@
         Vue.component('add-podcast-feed-url', {
           props: ['url'],
           template: "<div class=\"add-url-form\">\
-            <input class=\"add-url-form-input\" v-model=\"url\" placeholder=\"Feed URL To Be Added\">\
+            <div class=\"add-url-form-subpanel\">\
+              <div class=\"add-url-form-input-div\">\
+                <input class=\"add-url-form-input\" v-model=\"url\" placeholder=\"Feed URL To Be Added\"></input>\
+              </div>\
+              <div class=\"add-podcast-feed-button\">\
+                Add Podcast\
+              </div>\
+            </div>\
           </div>\
           "
         })
