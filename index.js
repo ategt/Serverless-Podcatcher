@@ -125,7 +125,7 @@ Vue.component('add-podcast-feed-url', {
 const podcastURLsTAG = "ServerlessPodcastingURLList";
 
 const defaultPodcastURLs = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
-                            "https://feeds.megaphone.fm/buck-sexton-show",
+                            "https://itunes.apple.com/us/podcast/superdatascience/id1163599059?mt=2",
                             "http://escapepod.org/feed/"
 ];
 
