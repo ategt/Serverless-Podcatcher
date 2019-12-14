@@ -379,7 +379,7 @@
                           feed[0].media = assignIds(feed[0].media);
                           feed[0].cast_url = cast_url;
                           feed[0].stale = false;
-                          vm.podcastFeedsList = vm.podcastFeedsList.concat(feed);
+                          vm.podcastFeedsList = vm.podcastFeedsList.filter((item) => item.cast_url !== cast_url).concat(feed);
                           sessionStorage.setItem(cast_url, JSON.stringify(feed[0]));
                       }).catch(function(error) {
                           const feeds = vm.podcastFeedsList.filter((item) => item.cast_url === cast_url);
