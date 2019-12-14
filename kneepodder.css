@@ -69,7 +69,6 @@ a {
 }
 .issue-pane {
   border: 1px grey solid;
-  max-width: 45em;
   padding: 2px;
   overflow: hidden;
   margin: 2px;
@@ -184,4 +183,7 @@ a {
   width: 71px;
   padding: 10px;
   display: block;
+}
+.issue-list {
+  width: 100%;
 }

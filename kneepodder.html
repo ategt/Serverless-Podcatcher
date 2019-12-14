@@ -20,7 +20,7 @@
         <div class="regular-issue-panel">
             <div class="regular-issue-panel-spacer">
             </div>
-            <div v-if="podcastErrorsList.length">
+            <div class="issue-list" v-if="podcastErrorsList.length">
                 <div v-for="(problem, index) in podcastErrorsList"
                     v-bind:index="index"
                     v-bind:key="problem.id">
