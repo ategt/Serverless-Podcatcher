@@ -292,7 +292,6 @@
                         <div class=\"item-description\" v-html=\"item.description\"></div>\
                     <div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
                 </div>",
-                //{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \\
             methods: {
                     downloadMedia: function() {
                         this.$root.itemDownloader(this.item)
