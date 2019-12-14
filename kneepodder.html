@@ -369,17 +369,28 @@
                 download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
             },
             feedRefresher: function(cast_url){
+                    if (this.podcastFeedsList.filter((item) => item.cast_url === cast_url).length === 0) {
+                      const oldResultRaw = sessionStorage.getItem(cast_url);
+
+                      if (oldResultRaw && oldResultRaw != null && oldResultRaw != undefined && oldResultRaw != "undefined") {
+                        const feed = JSON.parse(oldResultRaw);
+                        feed.info = "Loading...";
+                        feed.stale = true;
+                        this.podcastFeedsList = this.podcastFeedsList.concat(feed);
+                      }
+                    }
                     axios
-                      .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+                      //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+                      .get("http://127.0.0.1:5000/send/drinkin.xml")
                       .then(function(response) {
                           const rss_document = parseXml(response.data);
-                          let feed = processRSS(rss_document.children[0]);
-                          feed[0].id = vm.podcastFeedsList.length + 1;
-                          feed[0].media = assignIds(feed[0].media);
-                          feed[0].cast_url = cast_url;
-                          feed[0].stale = false;
+                          let feed = processRSS(rss_document.children[0])[0];
+                          feed.id = vm.podcastFeedsList.length + 1;
+                          feed.media = assignIds(feed.media);
+                          feed.cast_url = cast_url;
+                          feed.stale = false;
                           vm.podcastFeedsList = vm.podcastFeedsList.filter((item) => item.cast_url !== cast_url).concat(feed);
-                          sessionStorage.setItem(cast_url, JSON.stringify(feed[0]));
+                          sessionStorage.setItem(cast_url, JSON.stringify(feed));
                       }).catch(function(error) {
                           const feeds = vm.podcastFeedsList.filter((item) => item.cast_url === cast_url);
 
@@ -397,16 +408,6 @@
                           }
                       });
 
-                    if (this.podcastFeedsList.filter((item) => item.cast_url === cast_url).length === 0) {
-                      const oldResultRaw = sessionStorage.getItem(cast_url);
-
-                      if (oldResultRaw) {
-                        const feed = JSON.parse(oldResultRaw);
-                        feed.info = "Loading...";
-                        feed.stale = true;
-                        this.podcastFeedsList = this.podcastFeedsList.concat(feed);
-                      }
-                    }
                   }
           },
           mounted () {
