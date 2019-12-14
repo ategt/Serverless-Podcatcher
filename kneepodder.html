@@ -17,11 +17,15 @@
         <div class="nothing-yet" v-else>
             <p>Cool loading screen...</p>
         </div>
-        <div v-if="podcastErrorsList.length">
-            <div v-for="(problem, index) in podcastErrorsList"
-                        v-bind:index="index"
-                        v-bind:key="problem.id">
+        <div class="regular-issue-panel">
+            <div class="regular-issue-panel-spacer">
+            </div>
+            <div v-if="podcastErrorsList.length">
+                <div v-for="(problem, index) in podcastErrorsList"
+                    v-bind:index="index"
+                    v-bind:key="problem.id">
                         <problem v-bind:issue="problem"></problem>
+                </div>
             </div>
         </div>
         <div class="add-feed-panel">

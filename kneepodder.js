@@ -166,8 +166,8 @@ const vm = new Vue({
     },
     feedRefresher: function(cast_url){
             axios
-                        .get("http://127.0.0.1:5000/send/drinkin.xml")
-            .then(function(response) {
+              .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+              .then(function(response) {
                   const rss_document = parseXml(response.data);
                   let feed = processRSS(rss_document.children[0])[0];
                   feed.id = vm.podcastFeedsList.filter((item) => item.stale === false).length + 1;
