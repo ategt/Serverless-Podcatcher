@@ -370,8 +370,7 @@
             },
             feedRefresher: function(cast_url){
                     axios
-                      //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
-                      .get("http://127.0.0.1:5000/send/drinkin.xml")
+                      .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
                       .then(function(response) {
                           const rss_document = parseXml(response.data);
                           let feed = processRSS(rss_document.children[0])[0];
@@ -380,9 +379,7 @@
                           feed.cast_url = cast_url;
                           feed.stale = false;
                           vm.podcastFeedsList = vm.podcastFeedsList.filter((item) => item.cast_url !== cast_url).concat(feed);                          
-                          console.log("Going in", feed.id);
                           sessionStorage.setItem(cast_url, JSON.stringify(Object.assign({}, feed, {media: feed.media.slice(0,15)})));
-                          //{{ channel.media.slice(0, 5).map((item) => itemMap(item)).join("") }} \\
                       }).catch(function(error) {
                           const feeds = vm.podcastFeedsList.filter((item) => item.cast_url === cast_url);
 
@@ -407,9 +404,6 @@
                         const feed = JSON.parse(oldResultRaw);
                         feed.info = "Loading...";
                         feed.stale = true;
-
-                        //feed.id = this.podcastFeedsList.length + 1;
-                        console.log("Coming out", feed.id);
                         this.podcastFeedsList = this.podcastFeedsList.concat(feed);
                       }
                     }
