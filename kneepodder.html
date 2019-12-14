@@ -58,7 +58,6 @@
             display: flow-root;
             height: 26em;
             padding: 2px;
-            /* background-color: blue; */
             overflow: overlay;
         }
         a {
@@ -107,10 +106,22 @@
         .issue-panel-remove-wrapper {
           width: 5em;
           background-color: aquamarine;
+          text-align: center;
+          vertical-align: middle;
         }
         .issue-panel-retry-wrapper {
           display: flex;
           width: -webkit-fill-available;
+        }
+        .issue-remove-feed-button {
+          cursor: default; 
+        }
+        .issue-panel-remove-top {
+          height: 0.15em;
+        }
+        .issue-panel-remove-content {
+          display: block;
+          font-size: xx-large;
         }
     </style>
 </head>
@@ -196,7 +207,13 @@
                         </div>\
                       </div>\
                       <div class=\"issue-panel-remove-wrapper\" v-on:click=\"removeFeed\">\
-                        <span class=\"remove-feed-button issue-remove-feed-button\"></span>\
+                        <div class=\"issue-panel-remove-top\">\
+                        </div>\
+                        <div class=\"issue-panel-remove-content\">\
+                            <span class=\"remove-feed-button issue-remove-feed-button\">X</span>\
+                        </div>\
+                        <div class=\"issue-panel-remove-bottom\">\
+                        </div>\
                       </div>\
                     </div>',
           methods: {
@@ -205,6 +222,7 @@
                     },
                     removeFeed: function() {
                         this.$root.removePodcastURL(this.issue.url);
+                        this.$root.podcastErrorsList = this.$root.podcastErrorsList.filter((item) => item.id !== this.issue.id);
                     }
           }
         })
@@ -224,6 +242,13 @@
                         this.$root.itemDownloader(this.item)
                     }
                 }
+        })
+        Vue.component('add-podcast-feed-url', {
+          props: ['url'],
+          template: "<div class=\"add-url-form\">\
+            <input class=\"add-url-form-input\" v-model=\"url\" placeholder=\"Feed URL To Be Added\">\
+          </div>\
+          "
         })
 
         const podcastURLsTAG = "ServerlessPodcastingURLList";
