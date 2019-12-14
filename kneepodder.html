@@ -80,6 +80,7 @@
           padding: 2px;
           overflow: hidden;
           margin: 2px;
+          display: flex;
         }
         .issue-panel {
           width: fit-content;
@@ -102,6 +103,14 @@
         }
         .issue-main {
           display: flex;
+        }
+        .issue-panel-remove-wrapper {
+          width: 5em;
+          background-color: aquamarine;
+        }
+        .issue-panel-retry-wrapper {
+          display: flex;
+          width: -webkit-fill-available;
         }
     </style>
 </head>
@@ -170,27 +179,34 @@
         })
         Vue.component('problem', {
           props: ['issue'],
-          template: '<div class=\"issue-pane\" v-on:click=\"refreshFeed\" >\
-                      <div class=\"issue-panel\" >\
-                        <div class=\"issue-main\">\
-                          <span class=\"issue-explain\"><span class=\"issue-text\">Could not load </span><span class=\"issue-url\">{{ issue.url }}</span></span>\
-                        </div>\
-                        <div class=\"issue-info\">\
-                          <div class=\"issue-refresh issue-info-item\">\
-                            Click to Retry\
+          template: '<div class=\"issue-pane\">\
+                      <div class=\"issue-panel-retry-wrapper\" v-on:click=\"refreshFeed\">\
+                        <div class=\"issue-panel\" >\
+                          <div class=\"issue-main\">\
+                            <span class=\"issue-explain\"><span class=\"issue-text\">Could not load </span><span class=\"issue-url\">{{ issue.url }}</span></span>\
                           </div>\
-                          <div class=\"issue-message issue-info-item\">\
-                            {{ issue.error.message }} \
+                          <div class=\"issue-info\">\
+                            <div class=\"issue-refresh issue-info-item\">\
+                              Click to Retry\
+                            </div>\
+                            <div class=\"issue-message issue-info-item\">\
+                              {{ issue.error.message }} \
+                            </div>\
                           </div>\
                         </div>\
+                      </div>\
+                      <div class=\"issue-panel-remove-wrapper\" v-on:click=\"removeFeed\">\
+                        <span class=\"remove-feed-button issue-remove-feed-button\"></span>\
                       </div>\
                     </div>',
           methods: {
                     refreshFeed: function() {
                         this.$root.feedRefresher(this.issue.url);
+                    },
+                    removeFeed: function() {
+                        this.$root.removePodcastURL(this.issue.url);
                     }
           }
-
         })
         Vue.component('podcast-feed-item', {
           props: ['item'],
@@ -209,18 +225,46 @@
                     }
                 }
         })
-        const myPodcasts = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
-                                "https://feeds.megaphone.fm/buck-sexton-show",
-                                "http://escapepod.org/feed/"
-            ];
+
+        const podcastURLsTAG = "ServerlessPodcastingURLList";
+
+        const defaultPodcastURLs = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
+                                    "https://feeds.megaphone.fm/buck-sexton-show",
+                                    "http://escapepod.org/feed/"
+        ];
+
+        let myPodcastsStorage = localStorage.getItem(podcastURLsTAG);
+        let myPodcasts = myPodcastsStorage ? JSON.parse(myPodcastsStorage) : defaultPodcastURLs;
 
         const vm = new Vue({
           el: '#app',         
           data: {
             podcastFeedsList: new Array(),
             podcastErrorsList: new Array(),
+            myPodcasts: myPodcastsStorage ? JSON.parse(myPodcastsStorage) : defaultPodcastURLs,
           },
           methods: {
+            addPodcastURL: function (url) {
+                this.feedRefresher(url);
+
+                const podcastSet = new Set(vm.myPodcasts);
+
+                podcastSet.add(url);
+                
+                const tempPodcasts = new Array();
+                podcastSet.forEach((s) => tempPodcasts.push(s));
+
+                vm.myPodcasts = tempPodcasts;
+                this.updatePodcastURLs();
+            },
+            removePodcastURL: function (url) {
+                vm.myPodcasts = vm.myPodcasts.filter((cast_url) => cast_url !== url).map((cx) => cx);
+                console.log(`Removing ${url}`);
+                this.updatePodcastURLs();
+            },
+            updatePodcastURLs: function () {
+                localStorage.setItem(podcastURLsTAG, JSON.stringify(vm.myPodcasts));
+            },
             itemDownloader: function (item) {
                 download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
             },
@@ -234,6 +278,7 @@
                           let feed = processRSS(rss_document.children[0]);
                           feed[0].id = vm.podcastFeedsList.length + 1;
                           feed[0].media = assignIds(feed[0].media)
+                          feed[0].cast_url = cast_url;
                           vm.podcastFeedsList = vm.podcastFeedsList.concat(feed)
                         }).catch(function(error) {
                           const oldErrors = vm.podcastErrorsList.filter((lerror) => lerror.url === cast_url);
