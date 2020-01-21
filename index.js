@@ -89,7 +89,7 @@ Vue.component('podcast-feed-item', {
         </div>",
     methods: {
             downloadMedia: function() {
-                this.$root.itemDownloader(this.item)
+                this.$root.itemDownloader(this.item);
             }
         }
 })
@@ -167,7 +167,7 @@ const vm = new Vue({
         localStorage.setItem(podcastURLsTAG, JSON.stringify(vm.myPodcasts));
     },
     itemDownloader: function (item) {
-        download(`https://cors-anywhere.herokuapp.com/${item.media.url}`)
+        download(`https://cors-anywhere.herokuapp.com/${item.media.url}`, this.getMediafilename(item));
     },
     feedRefresher: function(cast_url){
             axios
@@ -214,8 +214,8 @@ const vm = new Vue({
         let titleBaseFilename = "";
 
         // Try to generate the filename by the item title
-        if (media.getItem() != null && media.getItem().getTitle() != null) {
-            const title = media.getItem().getTitle();
+        if (media != null && media.title != null) {
+            const title = media.title;
             titleBaseFilename = Array.from(title).map(letter => validCharSet.has(letter) ? letter : "_").join("").trim();
 
             if (titleBaseFilename.length == 0) {
