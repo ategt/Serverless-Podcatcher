@@ -69,6 +69,14 @@ function assignIds(object_list) {
 	return object_list.map((item, index) => Object.assign({}, item, {id: index}))
 }
 
+function fileNameFromUrl(url) {
+   var matches = url.match(/\/([^\/?#]+)[^\/]*$/);
+   if (matches.length > 1) {
+     return matches[1];
+   }
+   return null;
+}
+
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
-    module.exports =  { buildItem, processChannel, processRSS, feedToHtml, itemMap, updateFeedDisplay, assignIds };
+    module.exports =  { buildItem, processChannel, processRSS, feedToHtml, itemMap, updateFeedDisplay, assignIds, fileNameFromUrl };
 }

@@ -223,9 +223,9 @@ const vm = new Vue({
             }
         }
 
-        const URLBaseFilename = media.getDownload_url().match(/(((\w+\.\w{3,4})(?=\?)|(?=\w+\.\w{3,4}$).+))/g)[0];
+        const URLBaseFilename = fileNameFromUrl(media.url);
 
-        if (!titleBaseFilename.equals("")) {
+        if (!titleBaseFilename == "") {
             // Append extension
             const FILENAME_MAX_LENGTH = 220;
             if (titleBaseFilename.length > FILENAME_MAX_LENGTH) {
