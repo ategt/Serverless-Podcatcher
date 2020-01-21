@@ -124,6 +124,11 @@ Vue.component('add-podcast-feed-url', {
 
 const podcastURLsTAG = "ServerlessPodcastingURLList";
 
+const validChars = new Set("abcdefghijklmnopqrstuvwxyz" +
+                            "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
+                            "0123456789" +
+                            " _-");
+
 const defaultPodcastURLs = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
                             "https://itunes.apple.com/us/podcast/superdatascience/id1163599059?mt=2",
                             "http://escapepod.org/feed/"
@@ -210,21 +215,23 @@ const vm = new Vue({
 
         // Try to generate the filename by the item title
         if (media.getItem() != null && media.getItem().getTitle() != null) {
-            String title = media.getItem().getTitle();
-            titleBaseFilename = FileNameGenerator.generateFileName(title);
+            const title = media.getItem().getTitle();
+            titleBaseFilename = Array.from(title).map(letter => validCharSet.has(letter) ? letter : "_").join("").trim();
+
+            if (titleBaseFilename.length == 0) {
+              titleBaseFilename = Array.from(new Array(12)).map(_ => Math.floor(Math.random() * 26) + 'a'.charCodeAt(0)).map(code => String.fromCharCode(code)).join('');
+            }
         }
 
-        String URLBaseFilename = URLUtil.guessFileName(media.getDownload_url(),
-                null, media.getMime_type());
+        const URLBaseFilename = media.getDownload_url().match(/(((\w+\.\w{3,4})(?=\?)|(?=\w+\.\w{3,4}$).+))/g)[0];
 
         if (!titleBaseFilename.equals("")) {
             // Append extension
-            final int FILENAME_MAX_LENGTH = 220;
-            if (titleBaseFilename.length() > FILENAME_MAX_LENGTH) {
+            const FILENAME_MAX_LENGTH = 220;
+            if (titleBaseFilename.length > FILENAME_MAX_LENGTH) {
                 titleBaseFilename = titleBaseFilename.substring(0, FILENAME_MAX_LENGTH);
             }
-            filename = titleBaseFilename + FilenameUtils.EXTENSION_SEPARATOR +
-                    FilenameUtils.getExtension(URLBaseFilename);
+            filename = titleBaseFilename + URLBaseFilename.match(/(\.\w{3,4})$/g)[0];
         } else {
             // Fall back on URL file name
             filename = URLBaseFilename;
