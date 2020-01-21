@@ -203,7 +203,34 @@ const vm = new Vue({
                 this.podcastFeedsList = this.podcastFeedsList.concat(feed);
               }
             }
-          }
+          },
+      getMediafilename: function(media) {
+        let filename;
+        let titleBaseFilename = "";
+
+        // Try to generate the filename by the item title
+        if (media.getItem() != null && media.getItem().getTitle() != null) {
+            String title = media.getItem().getTitle();
+            titleBaseFilename = FileNameGenerator.generateFileName(title);
+        }
+
+        String URLBaseFilename = URLUtil.guessFileName(media.getDownload_url(),
+                null, media.getMime_type());
+
+        if (!titleBaseFilename.equals("")) {
+            // Append extension
+            final int FILENAME_MAX_LENGTH = 220;
+            if (titleBaseFilename.length() > FILENAME_MAX_LENGTH) {
+                titleBaseFilename = titleBaseFilename.substring(0, FILENAME_MAX_LENGTH);
+            }
+            filename = titleBaseFilename + FilenameUtils.EXTENSION_SEPARATOR +
+                    FilenameUtils.getExtension(URLBaseFilename);
+        } else {
+            // Fall back on URL file name
+            filename = URLBaseFilename;
+        }
+        return filename;
+    }          
   },
   mounted () {
     myPodcasts.forEach(this.feedRefresher);
