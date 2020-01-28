@@ -12,7 +12,7 @@
         <div v-if="podcastFeedsList.length | podcastErrorsList.length">
             <div v-for="(podcast, index) in podcastFeedsList"
                         v-bind:index="index"
-                        v-bind:key="podcast.id">
+                        v-bind:key="podcast.cast_url">
                         <podcast v-bind:channel="podcast"></podcast>
             </div>
         </div>

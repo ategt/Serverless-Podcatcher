@@ -85,7 +85,10 @@ Vue.component('podcast-feed-item', {
                 </div>\
                 <div class=\"item-title\">{{ item.title }}</div>\
                 <div class=\"item-description\" v-html=\"item.description\"></div>\
-            <div class=\"item-enclosure\"><a v-bind:href=\"item.media.url\">link</a></div>\
+            <div class=\"item-enclosure\">\
+            	<a v-if=\"item.media\" v-bind:href=\"item.media.url\">link</a>\
+            	<a v-else>No Media</a>\
+            </div>\
         </div>",
     methods: {
             downloadMedia: function() {
