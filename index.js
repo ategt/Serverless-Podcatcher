@@ -124,7 +124,7 @@ Vue.component('add-podcast-feed-url', {
 
 const podcastURLsTAG = "ServerlessPodcastingURLList";
 
-const validChars = new Set("abcdefghijklmnopqrstuvwxyz" +
+const validCharSet = new Set("abcdefghijklmnopqrstuvwxyz" +
                             "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
                             "0123456789" +
                             " _-");
@@ -179,8 +179,13 @@ const vm = new Vue({
                   feed.media = assignIds(feed.media);
                   feed.cast_url = cast_url;
                   feed.stale = false;
-                  vm.podcastFeedsList = vm.podcastFeedsList.filter((item) => item.cast_url !== cast_url).concat(feed);                          
-                  sessionStorage.setItem(cast_url, JSON.stringify(Object.assign({}, feed, {media: feed.media.slice(0,15)})));
+                  try {
+                    vm.podcastFeedsList = vm.podcastFeedsList.filter((item) => item.cast_url !== cast_url).concat(feed);
+                    sessionStorage.setItem(cast_url, JSON.stringify(Object.assign({}, feed, {media: feed.media.slice(0,15)})));
+                  } catch (error){
+                    problems = JSON.stringify({feedsList: vm.podcastFeedsList, errorsList: vm.podcastErrorsList, sources: vm.myPodcasts});
+                    download(problems, "Problems.json");
+                  }
               }).catch(function(error) {
                   const feeds = vm.podcastFeedsList.filter((item) => item.cast_url === cast_url);
 
