@@ -228,7 +228,7 @@ const vm = new Vue({
             }
         }
 
-        const URLBaseFilename = fileNameFromUrl(media.url);
+        const URLBaseFilename = fileNameFromUrl(media.media.url);
 
         if (!titleBaseFilename == "") {
             // Append extension
