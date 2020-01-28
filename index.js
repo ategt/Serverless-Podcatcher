@@ -92,7 +92,11 @@ Vue.component('podcast-feed-item', {
         </div>",
     methods: {
             downloadMedia: function() {
-                this.$root.itemDownloader(this.item);
+            	if (this.item.media) {
+                	this.$root.itemDownloader(this.item);
+            	} else {
+            		alert("No Media");
+            	}
             }
         }
 })
