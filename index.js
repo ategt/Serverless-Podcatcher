@@ -86,8 +86,8 @@ Vue.component('podcast-feed-item', {
                 <div class=\"item-title\">{{ item.title }}</div>\
                 <div class=\"item-description\" v-html=\"item.description\"></div>\
             <div class=\"item-enclosure\">\
-            	<a v-if=\"item.media\" v-bind:href=\"item.media.url\">link</a>\
-            	<a v-else>No Media</a>\
+            	<a class=\"download-link\" v-if=\"item.media\" v-bind:href=\"item.media.url\">link</a>\
+            	<a class=\"no-download-link\" v-else>No Media</a>\
             </div>\
         </div>",
     methods: {
@@ -174,7 +174,7 @@ const vm = new Vue({
         localStorage.setItem(podcastURLsTAG, JSON.stringify(vm.myPodcasts));
     },
     itemDownloader: function (item) {
-        download(`https://cors-anywhere.herokuapp.com/${item.media.url}`, this.getMediafilename(item));
+        saveAs(`https://cors-anywhere.herokuapp.com/${item.media.url}`, this.getMediafilename(item), item.media.type);
     },
     feedRefresher: function(cast_url){
             axios
@@ -191,7 +191,7 @@ const vm = new Vue({
                     sessionStorage.setItem(cast_url, JSON.stringify(Object.assign({}, feed, {media: feed.media.slice(0,15)})));
                   } catch (error){
                     problems = JSON.stringify({feedsList: vm.podcastFeedsList, errorsList: vm.podcastErrorsList, sources: vm.myPodcasts});
-                    download(problems, "Problems.json");
+                    saveAs(problems, "Problems.json");
                   }
               }).catch(function(error) {
                   const feeds = vm.podcastFeedsList.filter((item) => item.cast_url === cast_url);

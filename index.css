@@ -42,6 +42,8 @@
 .item-enclosure {
     text-align-last: center;
     border: 1px lightgray solid;
+}
+.item-enclosure>.download-link {
     background-color: lightgrey;
 }
 .item-title {
