@@ -32,30 +32,34 @@ function processChannel(channel) {
 	feed.media = new Array();
 
 	channel.children.filter((child)=>child.type=="element").forEach((element) => {
-		if ( element.name == "title" ){
-			feed.title = element.children[0].text;
-	    } else if ( element.name == "link" ){
-			feed.link = element.children[0].text;
-	    } else if ( element.name == "description" ){
-			feed.description = element.children[0].text;
-	    } else if ( element.name == "copyright" ){
-			feed.copyright = element.children[0].text;
-	    } else if ( element.name == "generator" ){
-			feed.generator = element.children[0].text;
-	    } else if ( element.name == "language" ){
-			feed.language = element.children[0].text;
-	    } else if ( element.name == "itunes:summary" ){
-			feed.summary = element.children[0].text;
-	    } else if ( element.name == "itunes:author" ){
-			feed.author = element.children[0].text;
-	    } else if ( element.name == "lastbuilddate" ){
-			feed.lastbuilddate = element.children[0].text;
-	    } else if ( element.name == "image" ){
-			feed.image = buildImage(element);
-	    } else if ( element.name == "item" ){
-			itemElements = element.children.filter((child)=>child.type=="element");
-			feed.media.push(buildItem(itemElements));
-	    }
+		try {
+			if ( element.name == "title" ){
+				feed.title = element.children[0].text;
+		    } else if ( element.name == "link" ){
+				feed.link = element.children[0].text;
+		    } else if ( element.name == "description" ){
+				feed.description = element.children[0].text;
+		    } else if ( element.name == "copyright" ){
+				feed.copyright = element.children[0].text;
+		    } else if ( element.name == "generator" ){
+				feed.generator = element.children[0].text;
+		    } else if ( element.name == "language" ){
+				feed.language = element.children[0].text;
+		    } else if ( element.name == "itunes:summary" ){
+				feed.summary = element.children[0].text;
+		    } else if ( element.name == "itunes:author" ){
+				feed.author = element.children[0].text;
+		    } else if ( element.name == "lastbuilddate" ){
+				feed.lastbuilddate = element.children[0].text;
+		    } else if ( element.name == "image" ){
+				feed.image = buildImage(element);
+		    } else if ( element.name == "item" ){
+				itemElements = element.children.filter((child)=>child.type=="element");
+				feed.media.push(buildItem(itemElements));
+		    }
+		} catch (error) {
+			console.error(error);
+		}
 	});
 
 	return feed;
