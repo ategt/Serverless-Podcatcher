@@ -82,6 +82,46 @@
             background-color: lightgrey;
             padding: 0.1em 2em;
         }
+        .add-url-form {
+          width: 100%;
+          display: block;
+          align-items: center;
+          text-align: center;
+          align-content: center;
+        }
+        .add-feed-panel {
+          text-align: center;
+          margin: 1.5em;
+          display: flex;
+          /*margin: 10px;*/
+        }
+        .add-url-form-input {
+          border-radius: 3px;
+          outline: none;
+          border: 3px solid darkgrey;
+          background-color: aliceblue;
+          padding: 0.2em 0.5em;
+          width: inherit;
+          border-radius: 9px;
+          height: inherit;
+        }
+        .add-podcast-feed-button {
+          background-color: lightgrey;
+          padding: 0.2em 2.5em;
+          margin: 0em 1.5em;
+          width: 11em;
+          color: #646c73;
+          border-radius: 9px;
+          border: 1px solid #646c73;
+        }
+        .add-url-form-input-div {
+          width: -webkit-fill-available;
+          height: inherit;
+        }
+        .add-url-form-subpanel {
+          display: flex;
+          margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -99,11 +139,41 @@
         <div class="nothing-yet" v-else>
             <p>Cool loading screen...</p>
         </div>
+        <add-url></add-url>
     </div>
     <script type="text/javascript" src="./vue.js"></script>
     <script type="text/javascript" src="./FileSaver.js"></script>
-    <script type="text/javascript" src="./get_vi.js"></script>
+    <script type="text/javascript" src="./axios.min.js"></script>
+    <!-- <script type="text/javascript" src="./get_vi.js"></script> -->
     <script type="text/javascript">
+        Vue.component('add-url', {
+          data: function() {
+            return {
+              newUrl: '',
+            }
+          },
+          template: "<div class=\"add-url-form\">\
+            <div class=\"add-url-form-subpanel\">\
+              <div class=\"add-url-form-input-div\">\
+                <input class=\"add-url-form-input\" v-model=\"newUrl\" v-on:keydown=\"submitForm($event)\" placeholder=\"URL To Be Processed\"></input>\
+              </div>\
+              <div class=\"add-url-button\" v-on:click=\"addUrl\">\
+                Add Podcast\
+              </div>\
+            </div>\
+          </div>\
+          ",
+          methods: {
+                  addUrl: function() {
+                    this.$root.processURL(this.newUrl);
+                  },
+                  submitForm: function(event) {
+                    if (event.key === "Enter") {
+                      this.addUrl();
+                    }
+                  }
+          },
+        })
         Vue.component('videoobject-header', {
           //Label \t   H x W \t itag \t audioQuality \t\t   Size \t\t MIME
           template: "<div class=\"item item-header\">\
@@ -154,17 +224,25 @@
         const vm = new Vue({
           el: '#app',         
           data: {
-            videoData : ytdx,
+            videoData : "",
             videoObjects: new Array(),
           },
           methods: {
             deserialize: function (data) {
                 return unescape(data).replace(/("initRange":\{([^}]+)\})/g,"").replace(/("indexRange":{([^\}]+)})/g,"").replace(/("colorInfo":{([^\}]+)})/g,"").match(/{(?:[^}^{]*)googlevideo\.com\/videoplayback(?:[^}^{]*)}/g).map(str => str.replace(/(,){2,9}/g,",")).map(str => JSON.parse(str)) //.replace(/("initRange":\{([^}]+)\})/g,"").replace(/("indexRange":{([^\}]+)})/g,"").match(/(\{(?:[^}^{]*)googlevideo\.com\/videoplayback(?:[^\}^\{]*)\})/g)
             },
+            processURL: function(url) {
+                axios
+                    .get(`https://cors-anywhere.herokuapp.com/${url}`)
+                    .then(function(response) {
+                        vm.videoObjects = vm.deserialize(response.data);
+                    }).catch(function(error) {
+                        console.error(error);
+                        alert("Something went wrong, see log for details.");
+                    });
+            },
           },
           mounted () {
-            this.videoObjects = this.deserialize(this.videoData);
-
             // for(let x of this.videoObjects) {
             //     console.log(x.itag,
             //                 x.qualityLabel,
