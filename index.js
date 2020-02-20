@@ -1,5 +1,58 @@
+const ExpandingInfoField = {
+  template: '<div class=\"delete-confirm-container content collapsed content-pane-id\">\
+                      <div class=\"delete-confirm-content content-hidden hidden content-hidden-id\">\
+                        <div class=\"delete-confirm-container-text\">\
+                          Please confirm to perminently delete\
+                        </div>\
+                        <div class=\"delete-button-container delete-button-sub-container\">\
+                          <div class=\"confirm-delete-button\" v-on:click=\"confirmDelete\">\
+                            Confirm\
+                          </div>\
+                          <div class=\"cancel-delete-button\" v-on:click=\"hideDeletePane\">\
+                            Cancel\
+                          </div>\
+                        </div>\
+                      </div>\
+                    </div>\
+                    ',
+  methods: {
+    panelViewInit: function(context) {
+      if (context.contentPane === undefined) {
+        context.contentPane = context.$el;
+      }
+
+      if (context.contentPane && context.contentHeight === undefined) {
+        context.contentPane.classList.remove("collapsed");
+        context.contentHeight = context.contentPane.offsetHeight;
+        context.contentPane.classList.add("collapsed");
+      }
+    },
+    hideDeletePane: function() {
+      if (this.contentPane) {
+        this.panelViewInit(this);
+        this.contentPane.style["max-height"] = "0px";
+      }
+    },
+    confirmDelete: function() {
+      console.log("Do the delete thing.");
+    },
+  },
+  mounted() {
+    this.panelViewInit(this);
+  },
+};
 Vue.component('podcast', {
+  components: {
+    'expanding-info-field': ExpandingInfoField,
+  },
   props: ['channel'],
+  data: function() {
+    return {
+      contentHeight: undefined,
+      //maxHeight: this.contentHeight ? `${this.contentHeight}px` : "200px",
+      //contentPane: this.$el,
+    }
+  },
   template: '<div class=\"feed-panel\">\
                 <div class=\"feed-image-panel\">\
                     <div class=\"feed-image-container\" v-if=\"channel.image\">\
@@ -12,7 +65,8 @@ Vue.component('podcast', {
                     </div>\
                 </div>\
                 <div>\
-                    <div class=\"title\">{{ channel.title }}</div>\
+                    <div class=\"title\" v-on:click=\"deleteClick\">{{ channel.title }}</div>\
+                    <expanding-info-field></expanding-info-field>\
                     <div class=\"description\" v-html=\"channel.description\"></div>\
                     <div class=\"media-panel\" v-bind:class=\"{ \'feed-stale\': channel.stale }\">\
                         <podcast-feed-item \
@@ -23,7 +77,33 @@ Vue.component('podcast', {
                                          ></podcast-feed-item>\
                     </div>\
                 </div>\
-            </div>'
+            </div>',
+  mounted() {
+    this.panelViewInit(this);
+  },
+  methods: {
+    panelViewInit: function(context) {
+      context.contentPane = context.$el.getElementsByClassName("content-pane-id")[0];
+
+      if (context.contentPane && context.contentHeight === undefined) {
+        context.contentPane.classList.remove("collapsed");
+        context.contentHeight = context.contentPane.offsetHeight;
+        context.contentPane.classList.add("collapsed");
+      }
+    },
+    deleteClick: function() {
+      console.log("Title Clicked");
+      this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
+      const localFunction = this.panelViewInit;
+      const contentPane = this.contentPane;
+      const context = this;
+      this.contentPane.addEventListener("transitionend", function(event) {
+        if (event.target === contentPane) {
+          localFunction(context);
+        }
+      });
+    },
+  },
 })
 Vue.component('podcast-feed-channel', {
   props: ['channel'],
@@ -39,22 +119,7 @@ Vue.component('podcast-feed-channel', {
                     <img class=\"feed-image\" v-bind:src=\"channel.image.url\" \>\
                 </div>\
                 <div>\
-                    <div class=\"title\">{{ channel.title }}</div>\
-                    <div class=\"delete-confirm-container content collapsed content-pane-id\">\
-                      <div class=\"delete-confirm-content content-hidden hidden content-hidden-id\">\
-                        <div class=\"delete-confirm-container-text\">\
-                          Please confirm to perminently delete\
-                        </div>\
-                        <div class=\"delete-button-container delete-button-sub-container\">\
-                          <div class=\"confirm-delete-button\" v-on:click=\"confirmDelete\">\
-                            Confirm\
-                          </div>\
-                          <div class=\"cancel-delete-button\" v-on:click=\"hideDeletePane\">\
-                            Cancel\
-                          </div>\
-                        </div>\
-                      </div>\
-                    </div>\
+                    <div class=\"title\" v-on:click=\"deleteClick()\">{{ channel.title }}</div>\
                     <div class=\"description\" v-html=\"channel.description\"></div>\
                     <div class=\"media-panel\">\
                     </div>\
@@ -71,6 +136,7 @@ Vue.component('podcast-feed-channel', {
       }
     },
     deleteClick: function() {
+      console.log("Title Clicked");
       this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
       const localFunction = this.panelViewInit;
       const contentPane = this.contentPane;
@@ -83,6 +149,7 @@ Vue.component('podcast-feed-channel', {
     },
   },
   mounted() {
+    console.log("Mounted");
     this.panelViewInit(this);
   } 
 })
@@ -225,7 +292,8 @@ const vm = new Vue({
     },
     feedRefresher: function(cast_url){
             axios
-              .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+              //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+              .get("http://127.0.0.1:5000/send/drinkin.xml")
               .then(function(response) {
                   const rss_document = parseXml(response.data);
                   let feed = processRSS(rss_document.children[0])[0];

@@ -6,6 +6,160 @@
     <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="index.css" />
+<style type="text/css">
+    .content-center-ns
+{-ms-flex-line-pack:center;align-content:center}
+.content-around-m
+{-ms-flex-line-pack:distribute;align-content:space-around}
+.content-stretch-m
+{-ms-flex-line-pack:stretch;align-content:stretch}
+.content-stretch-l
+{-ms-flex-line-pack:stretch;align-content:stretch}
+.overflow-hidden-l
+{overflow:hidden}
+.content-around-ns
+{-ms-flex-line-pack:distribute;align-content:space-around}
+.content-center-m
+{-ms-flex-line-pack:center;align-content:center}
+.content-center
+{-ms-flex-line-pack:center;align-content:center}
+.content-end
+{-ms-flex-line-pack:end;align-content:flex-end}
+.content-start-m
+{-ms-flex-line-pack:start;align-content:flex-start}
+.content-between-ns
+{-ms-flex-line-pack:justify;align-content:space-between}
+.overflow-x-hidden
+{overflow-x:hidden}
+.overflow-x-hidden-l
+{overflow-x:hidden}
+.content-end-l
+{-ms-flex-line-pack:end;align-content:flex-end}
+.content-around
+{-ms-flex-line-pack:distribute;align-content:space-around}
+.content-end-m
+{-ms-flex-line-pack:end;align-content:flex-end}
+.overflow-y-hidden
+{overflow-y:hidden}
+.content-start-ns
+{-ms-flex-line-pack:start;align-content:flex-start}
+.overflow-x-hidden-ns
+{overflow-x:hidden}
+.content-center-l
+{-ms-flex-line-pack:center;align-content:center}
+.content-end-ns
+{-ms-flex-line-pack:end;align-content:flex-end}
+.content-between
+{-ms-flex-line-pack:justify;align-content:space-between}
+.overflow-hidden-m
+{overflow:hidden}
+.overflow-y-hidden-ns
+{overflow-y:hidden}
+.content-stretch
+{-ms-flex-line-pack:stretch;align-content:stretch}
+.content-between-l
+{-ms-flex-line-pack:justify;align-content:space-between}
+[hidden],template
+{display:none}
+.overflow-y-hidden-l
+{overflow-y:hidden}
+.content-between-m
+{-ms-flex-line-pack:justify;align-content:space-between}
+.overflow-x-hidden-m
+{overflow-x:hidden}
+.content-stretch-ns
+{-ms-flex-line-pack:stretch;align-content:stretch}
+.content-start
+{-ms-flex-line-pack:start;align-content:flex-start}
+.content-start-l
+{-ms-flex-line-pack:start;align-content:flex-start}
+.overflow-y-hidden-m
+{overflow-y:hidden}
+.overflow-hidden
+{overflow:hidden}
+.overflow-hidden-ns
+{overflow:hidden}
+.content-around-l
+{-ms-flex-line-pack:distribute;align-content:space-around}
+</style>
+
+    <style type="text/css">
+        .delete-button-sub-container
+{
+    padding: 0;
+}
+.content-deployed
+{
+    padding: 1rem;
+    /*height: unset;*/
+}
+.delete-confirm-content
+{
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    transition: visibility 2.0s linear 1.0s, opacity 3.0s linear 1.0s;
+}
+.content
+{
+    transition: max-height 0.3s linear 0.0s, width 0.2s ease-out 0.1s, padding 3.0s linear 1.0s, height 3.0s linear 0.0s;
+    /*max-height: 0rem;*/
+    padding: 0rem;
+    overflow: hidden;
+}
+.confirm-delete-button, .cancel-delete-button
+{
+    width: unset;
+  }
+.cancel-delete-button
+{
+      position: relative;
+  }
+.collapsed
+{
+    max-height: 0px;
+}
+.confirm-delete-button
+{
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-content: left;
+    margin: 1rem;
+    width: 8rem;
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    color: wheat;
+    background-color: darkred;
+    text-decoration: none;
+    text-decoration-style: none;
+    border: 1px solid rgb(68,68,68);
+    text-decoration-line: none;
+    text-underline-position: none;
+}
+.delete-button-container
+{
+    position: relative;
+}
+.delete-confirm-container
+{
+    background-color: salmon;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 600;
+}
+.delete-confirm-container-text
+{
+    padding: 1rem;
+    text-align: center;
+}
+    </style>
 </head>
 <body>
     <div id="app">
