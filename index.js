@@ -249,7 +249,35 @@ const vm = new Vue({
             filename = URLBaseFilename;
         }
         return filename;
-    }          
+    },
+    replaceFeeds: function(replacementFeeds) {
+      this.myPodcasts = replacementFeeds;
+      this.updatePodcastURLs();
+    },
+    saveDebug: function(getFeeds) {
+      saveAs(new Blob([JSON.stringify(vm.podcastFeedsList)], {type:"plain/text"}), "Debugging-Feeds.json");
+      saveAs(new Blob([vm.myPodcasts.join("\n")], {type:"plain/text"}), "feeds.txt");
+
+      if (getFeeds) {
+        const proms = new Array();
+        const results = new Array();
+
+        for(let line of this.myPodcasts) {
+           proms.push(axios.get(`https://cors-anywhere.herokuapp.com/${line}`, {responseType: 'blob'})
+            .then(function (response) {
+            results.push({source:line, response:response.data});
+          })
+          .catch(function (error) {
+            console.error(error);
+          }));
+        }
+
+        axios.all(proms)
+          .then(function(not_sure){
+            saveAs(JSON.stringify(results), `debug-feeds-${Math.random()}${Math.random()}${Math.random()}`.replace(/\./g,"") + ".json");
+        });
+      }
+    }
   },
   mounted () {
     myPodcasts.forEach(this.feedRefresher);
