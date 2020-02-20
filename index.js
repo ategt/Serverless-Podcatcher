@@ -1,4 +1,5 @@
 const ExpandingInfoField = {
+  props: ['channel'],
   template: '<div class=\"delete-confirm-container content collapsed content-pane-id\">\
                       <div class=\"delete-confirm-content content-hidden hidden content-hidden-id\">\
                         <div class=\"delete-confirm-container-text\">\
@@ -34,7 +35,13 @@ const ExpandingInfoField = {
       }
     },
     confirmDelete: function() {
-      console.log("Do the delete thing.");
+      //this.$root.this.$root.removePodcastURL(this.$parent.channel.cast_url);
+      console.log(`Did the delete thing with ${this.$parent.channel.cast_url}.`);
+      const context = this;
+      Array.from(this.$el.getElementsByClassName("delete-confirm-container-text")).forEach(item => item.innerText = "Removal Succeded");
+      setInterval(function(){
+        context.hideDeletePane();
+      }, 600);
     },
   },
   mounted() {
