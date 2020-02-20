@@ -2,14 +2,17 @@ const ExpandingInfoField = {
   props: ['channel'],
   template: '<div class=\"delete-confirm-container content collapsed content-pane-id\">\
                       <div class=\"delete-confirm-content content-hidden hidden content-hidden-id\">\
-                        <div class=\"delete-confirm-container-text\">\
+                        <div class=\"delete-confirm-container-text delete-confirm-container-result custom-hidden\">\
+                          Removal Succeded\
+                        </div>\
+                        <div class=\"delete-confirm-container-text hidable\">\
                           Please confirm to perminently delete\
                         </div>\
                         <div class=\"delete-button-container delete-button-sub-container\">\
-                          <div class=\"confirm-delete-button\" v-on:click=\"confirmDelete\">\
+                          <div class=\"confirm-delete-button hidable\" v-on:click=\"confirmDelete\">\
                             Confirm\
                           </div>\
-                          <div class=\"cancel-delete-button\" v-on:click=\"hideDeletePane\">\
+                          <div class=\"cancel-delete-button hidable\" v-on:click=\"hideDeletePane\">\
                             Cancel\
                           </div>\
                         </div>\
@@ -38,7 +41,8 @@ const ExpandingInfoField = {
       //this.$root.this.$root.removePodcastURL(this.$parent.channel.cast_url);
       console.log(`Did the delete thing with ${this.$parent.channel.cast_url}.`);
       const context = this;
-      Array.from(this.$el.getElementsByClassName("delete-confirm-container-text")).forEach(item => item.innerText = "Removal Succeded");
+      Array.from(this.$el.getElementsByClassName("delete-confirm-container-result")).forEach(item => item.classList.remove("custom-hidden"));
+      Array.from(this.$el.getElementsByClassName("hidable")).forEach(item => item.classList.add("custom-hidden"));
       setInterval(function(){
         context.hideDeletePane();
       }, 600);
