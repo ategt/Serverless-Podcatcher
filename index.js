@@ -38,7 +38,7 @@ const ExpandingInfoField = {
       }
     },
     confirmDelete: function() {
-      //this.$root.this.$root.removePodcastURL(this.$parent.channel.cast_url);
+      this.$root.this.$root.removePodcastURL(this.$parent.channel.cast_url);
       console.log(`Did the delete thing with ${this.$parent.channel.cast_url}.`);
       const context = this;
       Array.from(this.$el.getElementsByClassName("delete-confirm-container-result")).forEach(item => item.classList.remove("custom-hidden"));
@@ -309,8 +309,8 @@ const vm = new Vue({
     },
     feedRefresher: function(cast_url){
             axios
-              //.get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
-              .get("http://127.0.0.1:5000/send/drinkin.xml")
+              .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+              //.get("http://127.0.0.1:5000/send/drinkin.xml")
               .then(function(response) {
                   const rss_document = parseXml(response.data);
                   let feed = processRSS(rss_document.children[0])[0];
