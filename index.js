@@ -27,17 +27,64 @@ Vue.component('podcast', {
 })
 Vue.component('podcast-feed-channel', {
   props: ['channel'],
+  data: function() {
+    return {
+      maxHeight: this.contentHeight ? `${this.contentHeight}px` : "200px",
+      contentHeight: -7,
+      contentPane: null,
+    }
+  },
   template: '<div class=\"feed-panel\">\
                 <div class=\"feed-image-panel\">\
                     <img class=\"feed-image\" v-bind:src=\"channel.image.url\" \>\
                 </div>\
                 <div>\
                     <div class=\"title\">{{ channel.title }}</div>\
+                    <div class=\"delete-confirm-container content collapsed content-pane-id\">\
+                      <div class=\"delete-confirm-content content-hidden hidden content-hidden-id\">\
+                        <div class=\"delete-confirm-container-text\">\
+                          Please confirm to perminently delete\
+                        </div>\
+                        <div class=\"delete-button-container delete-button-sub-container\">\
+                          <div class=\"confirm-delete-button\" v-on:click=\"confirmDelete\">\
+                            Confirm\
+                          </div>\
+                          <div class=\"cancel-delete-button\" v-on:click=\"hideDeletePane\">\
+                            Cancel\
+                          </div>\
+                        </div>\
+                      </div>\
+                    </div>\
                     <div class=\"description\" v-html=\"channel.description\"></div>\
                     <div class=\"media-panel\">\
                     </div>\
                 </div>\
-            </div>'
+            </div>',
+  methods: {
+    panelViewInit: function(context) {
+      context.contentPane = context.$el.getElementsByClassName("content-pane-id")[0];
+
+      if (contentPane && context.contentHeight === -7) {
+        contentPane.classList.remove("collapsed");
+        context.contentHeight = contentPane.offsetHeight;
+        contentPane.$el.classList.add("collapsed");
+      }
+    },
+    deleteClick: function() {
+      this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
+      const localFunction = this.panelViewInit;
+      const contentPane = this.contentPane;
+      const context = this;
+      this.contentPane.addEventListener("transitionend", function(event) {
+        if (event.target === contentPane) {
+          localFunction(context);
+        }
+      });
+    },
+  },
+  mounted() {
+    this.panelViewInit(this);
+  } 
 })
 Vue.component('problem', {
   props: ['issue'],
