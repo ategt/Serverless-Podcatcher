@@ -244,6 +244,7 @@ input, textarea {
     bottom: 0;
 }
 .delete-confirm-container {
+    position: absolute;
     background-color: salmon;
     border-radius: 5px;
     padding: 1rem;
@@ -295,6 +296,24 @@ input, textarea {
 .collapsed {
     max-height: 0px;
 }
+.title-bar {
+    display: grid;
+    grid-auto-flow: column;
+}
+span.delete-button {
+    cursor: pointer;
+    width: fit-content;
+    display: inline;
+    border: 2px solid darkgrey;
+    color: darkgrey;
+    border-radius: 6px;
+    padding: 3px;
+    margin: 5px;
+    }
+    .button-correcting-div {
+        text-align: right;
+        padding: 0.3rem;
+    }
     </style>
 </head>
 <body>

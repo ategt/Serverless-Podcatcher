@@ -65,8 +65,14 @@ Vue.component('podcast', {
                     </div>\
                 </div>\
                 <div>\
-                    <div class=\"title\" v-on:click=\"deleteClick\">{{ channel.title }}</div>\
-                    <expanding-info-field></expanding-info-field>\
+                    <div class=\"title-bar\">\
+                      <div class=\"title-correcting-div\"></div>\
+                      <div class=\"title\">{{ channel.title }}</div>\
+                      <div class=\"button-correcting-div\">\
+                        <span class=\"delete-button\" v-on:click=\"deleteClick\">X</span>\
+                        <expanding-info-field></expanding-info-field>\
+                      </div>\
+                    </div>\
                     <div class=\"description\" v-html=\"channel.description\"></div>\
                     <div class=\"media-panel\" v-bind:class=\"{ \'feed-stale\': channel.stale }\">\
                         <podcast-feed-item \
