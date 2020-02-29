@@ -82,5 +82,5 @@ function fileNameFromUrl(url) {
 }
 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
-    module.exports =  { buildItem, processChannel, processRSS, feedToHtml, itemMap, updateFeedDisplay, assignIds, fileNameFromUrl };
+    module.exports =  { buildItem, processChannel, processRSS, assignIds, fileNameFromUrl };
 }
