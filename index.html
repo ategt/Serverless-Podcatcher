@@ -118,6 +118,10 @@
 {
     max-height: 0px;
 }
+.feed-canceled {
+     color: orange; 
+     background: darkred; 
+}
 .confirm-delete-button
 {
     font-family: Arial;
@@ -323,6 +327,27 @@ span.delete-button {
     width: 100%;
     vertical-align: middle;
 }
+#background-overlay{
+    background-color:transparent;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:none;
+}
+#popup, .popup{
+    /*background-color:#fff;
+    border:1px solid #000;
+    width:80vw;
+    height:80vh;
+    position:absolute;
+    margin-left:10vw;
+    margin-right:10vw;
+    margin-top:10vh;
+    margin-bottom:10vh;*/
+    z-index:500;
+}
     </style>
 </head>
 <body>
@@ -353,6 +378,7 @@ span.delete-button {
           <add-podcast-feed-url></add-podcast-feed-url>
         </div>
     </div>
+    <div id="background-overlay"></div>
     <!-- <script type="text/javascript" src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script> -->
     <script type="text/javascript" src="./vue.js"></script>
     <script type="text/javascript" src="https://unpkg.com/@rgrove/parse-xml@2.0.1/dist/umd/parse-xml.min.js"></script>

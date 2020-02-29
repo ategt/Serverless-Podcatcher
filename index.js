@@ -1,6 +1,6 @@
 const ExpandingInfoField = {
   props: ['channel'],
-  template: '<div class=\"delete-confirm-container content collapsed content-pane-id\">\
+  template: '<div class=\"delete-confirm-container content collapsed content-pane-id popup\">\
                       <div class=\"delete-confirm-content content-hidden hidden content-hidden-id\">\
                         <div class=\"delete-confirm-container-text delete-confirm-container-result custom-hidden\">\
                           Removal Succeded\
@@ -32,6 +32,9 @@ const ExpandingInfoField = {
       }
     },
     hideDeletePane: function() {
+      const overlay = document.getElementById('background-overlay');
+      overlay.style.display = 'none';
+
       if (this.contentPane) {
         this.panelViewInit(this);
         this.contentPane.style["max-height"] = "0px";
@@ -110,9 +113,17 @@ Vue.component('podcast', {
     },
     deleteClick: function() {
       this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
+      const context = this;
+
+      const overlay = document.getElementById('background-overlay');
+      overlay.style.display = 'block';
+      overlay.addEventListener("click", function(event) {
+        overlay.style.display = 'none';
+        Array.from(context.$children).filter(child => child.$vnode.tag.includes("expanding-info-field")).forEach(item => item.$vnode.componentInstance.hideDeletePane());
+      });
+
       const localFunction = this.panelViewInit;
       const contentPane = this.contentPane;
-      const context = this;
       this.contentPane.addEventListener("transitionend", function(event) {
         if (event.target === contentPane) {
           localFunction(context);
@@ -410,5 +421,21 @@ const vm = new Vue({
   },
   mounted () {
     myPodcasts.forEach(this.feedRefresher);
+
+    window.onload = function(){
+      var popup = document.getElementById('popup');
+      var overlay = document.getElementById('background-overlay');
+      var openButton = document.getElementById('openOverlay');
+      document.onclick = function(e){
+        if(e.target.id == 'backgroundOverlay'){
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        if(e.target === openButton){
+           popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+      };
+    };
   },
 })
