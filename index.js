@@ -41,33 +41,23 @@ const ExpandingInfoField = {
       }
     },
     confirmDelete: function() {
-      //this.$root.removePodcastURL(this.$parent.channel.cast_url);
-
-      // document.getElementsByClassName("feed-panel")[5].parentElement.style.transition = "max-height 0.3s linear 3.0s";
-      // document.getElementsByClassName("feed-panel")[5].parentElement.style["max-height"] = "0px";
-      // document.getElementsByClassName("feed-panel")[5].parentElement.style.overflow = "hidden";
+      this.$root.removePodcastURL(this.$parent.channel.cast_url);
 
       let parentDiv = this.$el.parentElement;
 
-      while (!parentDiv.classList.contains("feed-panel")) {
+      while (!parentDiv.classList.contains("feed-panel") && parentDiv !== parentDiv.parentElement) {
         parentDiv = parentDiv.parentElement;
       }
 
-      // const parentDiv = this.$el.parentElement;
-
-      // parentDiv.style.transition = "max-height 0.3s linear 3.0s, height 3.0s linear 3.0s";
-      // parentDiv.style.overflow = "hidden";
-      // parentDiv.style["height"] = "0px";
-
-      //zx = document.getElementsByClassName("feed-panel")[5]
-
-      parentDiv.parentElement.style["max-height"] = parentDiv.parentElement.offsetHeight ? `${parentDiv.parentElement.offsetHeight}px` : "200px";
-      parentDiv.parentElement.style.transition = "max-height 3.0s linear 0.0s";
-      parentDiv.parentElement.style.overflow = "hidden";
-
-      setInterval(function(){
-        parentDiv.parentElement.style["max-height"] = "0px";
-      }, 10);
+      if ( parentDiv.classList.contains("feed-panel") ) {
+        parentDiv.parentElement.style["max-height"] = parentDiv.parentElement.offsetHeight ? `${parentDiv.parentElement.offsetHeight}px` : "200px";
+        parentDiv.parentElement.style.transition = "max-height 3.0s linear 0.0s";
+        parentDiv.parentElement.style.overflow = "hidden";
+  
+        setInterval(function(){
+          parentDiv.parentElement.style["max-height"] = "0px";
+        }, 10);
+      }
 
       console.log(`Did the delete thing with ${this.$parent.channel.cast_url}.`);
       const context = this;
