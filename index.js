@@ -38,7 +38,7 @@ const ExpandingInfoField = {
       }
     },
     confirmDelete: function() {
-      this.$root.this.$root.removePodcastURL(this.$parent.channel.cast_url);
+      this.$root.removePodcastURL(this.$parent.channel.cast_url);
       console.log(`Did the delete thing with ${this.$parent.channel.cast_url}.`);
       const context = this;
       Array.from(this.$el.getElementsByClassName("delete-confirm-container-result")).forEach(item => item.classList.remove("custom-hidden"));
@@ -109,7 +109,6 @@ Vue.component('podcast', {
       }
     },
     deleteClick: function() {
-      console.log("Title Clicked");
       this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
       const localFunction = this.panelViewInit;
       const contentPane = this.contentPane;
@@ -153,7 +152,6 @@ Vue.component('podcast-feed-channel', {
       }
     },
     deleteClick: function() {
-      console.log("Title Clicked");
       this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
       const localFunction = this.panelViewInit;
       const contentPane = this.contentPane;
@@ -166,7 +164,6 @@ Vue.component('podcast-feed-channel', {
     },
   },
   mounted() {
-    console.log("Mounted");
     this.panelViewInit(this);
   } 
 })

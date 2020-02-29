@@ -4,6 +4,7 @@
 .feed-panel {
     display: flex;
     margin: 10px;
+    transition: max-height 0.3s linear 0.0s, width 0.2s ease-out 0.1s, padding 3.0s linear 1.0s, height 3.0s linear 0.0s, color 1.0s linear 0.0s, background 1.0s linear 0.0s;
 }
 .feed-image-panel {
     display: flow-root;
