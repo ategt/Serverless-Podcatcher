@@ -32,15 +32,18 @@ function processChannel(channel) {
 	feed.media = new Array();
 
 	channel.children.filter((child)=>child.type=="element").forEach((element) => {
-		try {
 			if ( element.name == "title" ){
 				feed.title = element.children[0].text;
 		    } else if ( element.name == "link" ){
-				feed.link = element.children[0].text;
+		    	if (element.children[0] != undefined) {
+					feed.link = element.children[0].text;
+				}
 		    } else if ( element.name == "description" ){
 				feed.description = element.children[0].text;
 		    } else if ( element.name == "copyright" ){
-				feed.copyright = element.children[0].text;
+		    	if (element.children[0] != undefined) {
+					feed.copyright = element.children[0].text;
+		    	}
 		    } else if ( element.name == "generator" ){
 				feed.generator = element.children[0].text;
 		    } else if ( element.name == "language" ){
@@ -57,9 +60,6 @@ function processChannel(channel) {
 				itemElements = element.children.filter((child)=>child.type=="element");
 				feed.media.push(buildItem(itemElements));
 		    }
-		} catch (error) {
-			console.error(error);
-		}
 	});
 
 	return feed;
