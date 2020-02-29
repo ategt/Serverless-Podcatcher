@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue Progress Things</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style type="text/css">
+        html,
+        body {
+          background-color: #2962FF;
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+                  justify-content: center;
+          height: 100%;
+          position: relative;
+        }
+        circle {
+          -webkit-transition: stroke-dashoffset 0.35s;
+          transition: stroke-dashoffset 0.35s;
+          -webkit-transform: rotate(-90deg);
+                  transform: rotate(-90deg);
+          -webkit-transform-origin: 50% 50%;
+                  transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/javascript" src="./vue.js"></script>
+    <script type="text/javascript">
+        const ProgressRing = Vue.component('progress-ring', {
+  props: {
+    radius: Number,
+    progress: Number,
+    stroke: Number
+  },
+  data() {
+    const normalizedRadius = this.radius - this.stroke * 2;
+    const circumference = normalizedRadius * 2 * Math.PI;
+    
+    return {
+      normalizedRadius,
+      circumference
+    };
+  },
+  computed: {
+    strokeDashoffset() {
+      return this.circumference - this.progress / 100 * this.circumference;
+    }
+  },
+  template: `
+    <svg
+      :height="radius * 2"
+      :width="radius * 2"
+     >
+       <circle
+         stroke="white"
+         :stroke-dasharray="circumference + ' ' + circumference"
+         :style="{ strokeDashoffset: strokeDashoffset }"
+         :stroke-width="stroke"
+         fill="transparent"
+         :r="normalizedRadius"
+         :cx="radius"
+         :cy="radius"
+      />
+    </svg>
+  `
+});
+
+  
+// launch example with progress ring
+const vm = new Vue({
+  el: '#example',
+  components: {
+    'progress-ring': ProgressRing
+  },
+  data() {
+    return { progress: 0 }
+  },
+  mounted() {
+    // emulating progress
+    const interval = setInterval(() => {
+      this.progress += 10;
+      if (this.progress === 100)
+        clearInterval(interval);
+    }, 1000);
+  },
+  template: `
+    <div>
+      <progress-ring radius="60" :progress="progress" stroke="4"></progress-ring>
+    </div>
+  `
+});
+    </script>
+</body>
+</html>
