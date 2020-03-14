@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TYD</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <style type="text/css">
+        .item-header>div>a {
+            border: unset;
+            width: 1.6em;
+        }
+        .item-header {
+            background-color: lightgrey;
+            color: darkgrey;
+            /*font-size: smaller;*/
+        }
+        .item-itag {
+            width: 2.5em;
+        }
+        .item-quality-label {
+            width: 3.5em;
+        }
+        .item-audio-quality {
+            width: 14em;
+        }
+        .item-content-length {
+            width: 5em;
+        }
+        .item-dimensions {
+            width: 5em;
+        }
+        .item-mime-type {
+            width: 23em;
+        }
+        .item-approx-duration-ms {
+            width: 5em;
+        }
+        .item>div {
+            border: 1px solid lightgrey;
+            /*border: solid grey;*/
+            text-align: center;
+            /*width: 3em;
+            padding: 0em 1em;*/
+        }
+        /*.item-audio-quality {
+            width: 3em;
+        }*/
+        .item-dimensions {
+            width: 6em;
+        }
+        .item {
+            border: 1px gray solid;
+            /* max-width: 15%; */
+            max-width: unset;
+            min-width: unset;
+            padding: 5px;
+            /* display: block; */
+            display: inline-flex;
+            margin: 1px 3em;
+            /* min-width: 10em; */
+            /* width: 70%; */
+            /* height: fit-content; */
+            /* display: block; */
+            /* height: fit-content;
+            border: 1px gray solid;
+            /* max-width: 15%; */
+            /*max-width: unset;
+            min-width: unset;
+            padding: 5px;
+            /*display: block;*/
+            /*display: inline-flex;
+            margin: 7px 3em;*/
+            /* min-width: 10em; */
+            /*width: 70%;*/
+            /* height: fit-content; */
+            /* display: block; */
+            /* height: fit-content; */
+        }
+        .item-enclosure>.download-link {
+            background-color: lightgrey;
+            padding: 0.1em 2em;
+        }
+        .add-url-form {
+          width: 100%;
+          display: block;
+          align-items: center;
+          text-align: center;
+          align-content: center;
+        }
+        .add-feed-panel {
+          text-align: center;
+          margin: 1.5em;
+          display: flex;
+          /*margin: 10px;*/
+        }
+        .add-url-form-input {
+          border-radius: 3px;
+          outline: none;
+          border: 3px solid darkgrey;
+          background-color: aliceblue;
+          padding: 0.2em 0.5em;
+          width: inherit;
+          border-radius: 9px;
+          height: inherit;
+        }
+        .add-podcast-feed-button {
+          background-color: lightgrey;
+          padding: 0.2em 2.5em;
+          margin: 0em 1.5em;
+          width: 11em;
+          color: #646c73;
+          border-radius: 9px;
+          border: 1px solid #646c73;
+        }
+        .add-url-form-input-div {
+          width: -webkit-fill-available;
+          height: inherit;
+        }
+        .add-url-form-subpanel {
+          display: flex;
+          margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-if="videoObjects.length">
+            <div>
+                <videoobject-header></videoobject-header>
+            </div>
+            <div v-for="(videoObject, index) in videoObjects"
+                        v-bind:index="index"
+                        v-bind:key="videoObject.url">
+                        <videoobject v-bind:item="videoObject"></videoobject>
+            </div>
+        </div>
+        <div class="nothing-yet" v-else>
+            <p>Cool loading screen...</p>
+        </div>
+        <add-url></add-url>
+    </div>
+    <script type="text/javascript" src="./vue.js"></script>
+    <script type="text/javascript" src="./FileSaver.js"></script>
+    <script type="text/javascript" src="./axios.min.js"></script>
+    <!-- <script type="text/javascript" src="./get_vi.js"></script> -->
+    <script type="text/javascript">
+        Vue.component('add-url', {
+          data: function() {
+            return {
+              newUrl: '',
+            }
+          },
+          template: "<div class=\"add-url-form\">\
+            <div class=\"add-url-form-subpanel\">\
+              <div class=\"add-url-form-input-div\">\
+                <input class=\"add-url-form-input\" v-model=\"newUrl\" v-on:keydown=\"submitForm($event)\" placeholder=\"URL To Be Processed\"></input>\
+              </div>\
+              <div class=\"add-url-button\" v-on:click=\"addUrl\">\
+                Add Podcast\
+              </div>\
+            </div>\
+          </div>\
+          ",
+          methods: {
+                  addUrl: function() {
+                    this.$root.processURL(this.newUrl);
+                  },
+                  submitForm: function(event) {
+                    if (event.key === "Enter") {
+                      this.addUrl();
+                    }
+                  }
+          },
+        })
+        Vue.component('videoobject-header', {
+          //Label \t   H x W \t itag \t audioQuality \t\t   Size \t\t MIME
+          template: "<div class=\"item item-header\">\
+                        <div class=\"download-button-holder\">\
+                            <span class=\"download-symbol download-button\" />\
+                        </div>\
+                        <div class=\"item-itag\">itag</div>\
+                        <div class=\"item-quality-label\">Quality Label</div>\
+                        <div class=\"item-dimensions\">Height x Width</div>\
+                        <div class=\"item-audio-quality\">Audio Quality</div>\
+                        <div class=\"item-content-length\">Content Length</div>\
+                        <div class=\"item-approx-duration-ms\">Approx Duration Ms</div>\
+                        <div class=\"item-mime-type\">MIME Type</div>\
+                        <div class=\"item-enclosure\">\
+                            <a class=\"download-link\"></a>\
+                        </div>\
+                    </div>",
+        });
+        Vue.component('videoobject', {
+          props: ['item'],
+          template: "<div class=\"item\" v-on:click=\"downloadMedia\">\
+                        <div class=\"download-button-holder\">\
+                            <span class=\"download-symbol download-button\" />\
+                        </div>\
+                        <div class=\"item-itag\">{{ item.itag }}</div>\
+                        <div class=\"item-quality-label\">{{ item.qualityLabel }}</div>\
+                        <div class=\"item-dimensions\">{{ item.height }}x{{ item.width }}</div>\
+                        <div class=\"item-audio-quality\">{{ item.audioQuality }}</div>\
+                        <div class=\"item-content-length\">{{ item.contentLength }}</div>\
+                        <div class=\"item-approx-duration-ms\">{{ item.approxDurationMs }}</div>\
+                        <div class=\"item-mime-type\">{{ item.mimeType }}</div>\
+                        <div class=\"item-enclosure\">\
+                            <a class=\"download-link\" v-if=\"item.url\" v-bind:href=\"item.url\">link</a>\
+                            <a class=\"no-download-link\" v-else>No Media</a>\
+                        </div>\
+                    </div>",
+            methods: {
+                    downloadMedia: function() {
+                        if (this.item.url) {
+                            saveAs(this.item.url);
+                        } else {
+                            alert("No Media");
+                        }
+                    }
+                }
+        });
+
+        const vm = new Vue({
+          el: '#app',         
+          data: {
+            videoData : "",
+            videoObjects: new Array(),
+          },
+          methods: {
+            deserialize: function (data) {
+                return unescape(data).replace(/("initRange":\{([^}]+)\})/g,"").replace(/("indexRange":{([^\}]+)})/g,"").replace(/("colorInfo":{([^\}]+)})/g,"").match(/{(?:[^}^{]*)googlevideo\.com\/videoplayback(?:[^}^{]*)}/g).map(str => str.replace(/(,){2,9}/g,",")).map(str => JSON.parse(str)) //.replace(/("initRange":\{([^}]+)\})/g,"").replace(/("indexRange":{([^\}]+)})/g,"").match(/(\{(?:[^}^{]*)googlevideo\.com\/videoplayback(?:[^\}^\{]*)\})/g)
+            },
+            processURL: function(url) {
+                axios
+                    .get(`https://cors-anywhere.herokuapp.com/${url}`)
+                    .then(function(response) {
+                        vm.videoObjects = vm.deserialize(response.data);
+                    }).catch(function(error) {
+                        console.error(error);
+                        alert("Something went wrong, see log for details.");
+                    });
+            },
+          },
+          mounted () {
+            // for(let x of this.videoObjects) {
+            //     console.log(x.itag,
+            //                 x.qualityLabel,
+            //                 x.height,
+            //                 x.width,
+            //                 x.itag,
+            //                 x.audioQuality,
+            //                 x.contentLength,
+            //                 x.approxDurationMs,
+            //                 x.mimeType);
+
+            // };
+          },
+        });
+    </script>
+</body>
+</html>
