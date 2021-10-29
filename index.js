@@ -330,11 +330,11 @@ const vm = new Vue({
         localStorage.setItem(podcastURLsTAG, JSON.stringify(vm.myPodcasts));
     },
     itemDownloader: function (item) {
-        saveAs(`https://cors-anywhere.herokuapp.com/${item.media.url}`, this.getMediafilename(item), item.media.type);
+        saveAs(`https://gobetween.oklabs.org/${item.media.url}`, this.getMediafilename(item), item.media.type);
     },
     feedRefresher: function(cast_url){
             axios
-              .get(`https://cors-anywhere.herokuapp.com/${cast_url}`)
+              .get(`https://gobetween.oklabs.org/${cast_url}`)
               //.get("http://127.0.0.1:5000/send/drinkin.xml")
               .then(function(response) {
                   const rss_document = parseXml(response.data);
@@ -420,7 +420,7 @@ const vm = new Vue({
         const results = new Array();
 
         for(let line of this.myPodcasts) {
-           proms.push(axios.get(`https://cors-anywhere.herokuapp.com/${line}`, {responseType: 'blob'})
+           proms.push(axios.get(`https://gobetween.oklabs.org/${line}`, {responseType: 'blob'})
             .then(function (response) {
             results.push({source:line, response:response.data});
           })
