@@ -338,7 +338,7 @@ const vm = new Vue({
               //.get(`https://gobetween.oklabs.org/${cast_url}`)
               //.get("http://127.0.0.1:5000/send/drinkin.xml")
               .then(function(response) {
-                  const rss_document = parseXml(response.data);
+                  const rss_document = parseXml(response.data.content);
                   let feed = processRSS(rss_document.children[0])[0];
                   feed.id = vm.podcastFeedsList.filter((item) => item.stale === false).length + 1;
                   feed.media = assignIds(feed.media);
