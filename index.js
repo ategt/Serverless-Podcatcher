@@ -334,7 +334,8 @@ const vm = new Vue({
     },
     feedRefresher: function(cast_url){
             axios
-              .get(`https://gobetween.oklabs.org/${cast_url}`)
+              .get(`https://api.allorigins.win/get?url=${encodeURIComponent(cast_url)}`)
+              //.get(`https://gobetween.oklabs.org/${cast_url}`)
               //.get("http://127.0.0.1:5000/send/drinkin.xml")
               .then(function(response) {
                   const rss_document = parseXml(response.data);
