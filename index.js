@@ -330,7 +330,12 @@ const vm = new Vue({
         localStorage.setItem(podcastURLsTAG, JSON.stringify(vm.myPodcasts));
     },
     itemDownloader: function (item) {
-        saveAs(`https://gobetween.oklabs.org/${item.media.url}`, this.getMediafilename(item), item.media.type);
+        //saveAs(`https://gobetween.oklabs.org/${item.media.url}`, this.getMediafilename(item), item.media.type);
+    	axios
+          .get(`https://api.allorigins.win/get?url=${encodeURIComponent(item.media.url)}`)
+          .then(function (response) {
+			  saveAs(response.data.contents, this.getMediafilename(item), item.media.type);
+          });
     },
     feedRefresher: function(cast_url){
             axios
@@ -338,7 +343,7 @@ const vm = new Vue({
               //.get(`https://gobetween.oklabs.org/${cast_url}`)
               //.get("http://127.0.0.1:5000/send/drinkin.xml")
               .then(function(response) {
-                  const rss_document = parseXml(response.data.content);
+                  const rss_document = parseXml(response.data.contents);
                   let feed = processRSS(rss_document.children[0])[0];
                   feed.id = vm.podcastFeedsList.filter((item) => item.stale === false).length + 1;
                   feed.media = assignIds(feed.media);
