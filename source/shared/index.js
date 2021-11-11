@@ -1,14 +1,16 @@
-export const podcastURLsTAG = "ServerlessPodcastingURLList";
+import { defaultPodcastURLs, podcastURLsTAG } from './CONSTANTS';
 
-export const validCharSet = new Set("abcdefghijklmnopqrstuvwxyz" +
-                            "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
-                            "0123456789" +
-                            " _-");
+export function getPodcastsFromStorage () {
+	// myPodcastsStorage;
+	return localStorage.getItem(podcastURLsTAG);
+};
 
-export const defaultPodcastURLs = ["https://www.spreaker.com/ihr/show/2372109/episodes/feed-passthrough",
-       		                       "https://itunes.apple.com/us/podcast/superdatascience/id1163599059?mt=2",
-              		               "http://escapepod.org/feed/",
-];
+export function loadPodcastUrls () {
+	// myPodcastsStorage
+	const podcastsFromStorage = getPodcastsFromStorage();
+	return podcastsFromStorage ? JSON.parse(podcastsFromStorage) : defaultPodcastURLs;
+};
 
-export let myPodcastsStorage = localStorage.getItem(podcastURLsTAG);
-export let myPodcasts = myPodcastsStorage ? JSON.parse(myPodcastsStorage) : defaultPodcastURLs;
+export function buildCorsProxyUrl ( url ) {
+	return `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+}
