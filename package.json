@@ -28,9 +28,11 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
+    "@storybook/vue": "^6.3.12",
     "@vue/test-utils": "^1.2.2",
     "babel-loader": "^8.2.3",
     "babel-polyfill": "^6.26.0",
+    "babel-preset-vue": "^2.0.2",
     "chai": "^4.3.4",
     "css-loader": "^6.5.1",
     "docdash": "^1.2.0",
