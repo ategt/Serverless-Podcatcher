@@ -5,10 +5,7 @@ module.exports = {
   mode: 'development',
   devtool: "eval-source-map",
   entry: {
-    main: './source/full',
-    debug: './source/debug',
-    tests: './source/tests',
-    helper: './source/helper',
+    main: './source/main',
   },
   output: {
     filename: '[name].js',

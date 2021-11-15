@@ -72,10 +72,7 @@
 {overflow:hidden}
 .content-around-l
 {-ms-flex-line-pack:distribute;align-content:space-around}
-</style>
-
-    <style type="text/css">
-        .delete-button-sub-container
+.delete-button-sub-container
 {
     padding: 0;
 }
@@ -154,9 +151,7 @@
     padding: 1rem;
     text-align: center;
 }
-    </style>
-    <style type="text/css">
-        text-area, textarea {
+text-area, textarea {
     margin: 0px;
     height: 8rem;
 }
