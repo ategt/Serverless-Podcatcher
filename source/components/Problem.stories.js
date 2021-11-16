@@ -9,7 +9,6 @@ export default {
 const Template = args => ({
   components: { "problem": Problem, },
   data () {
-  	  console.log(args);
       return { 
       	issue: args.issue,
       };
