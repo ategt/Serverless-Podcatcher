@@ -6,12 +6,6 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 //import podcasts from './modules/podcasts';
 
-export const actionsData = {
-  onPinTask: action('pin-task'),
-  onArchiveTask: action('archive-task'),
-  onRefresh: action('refresh'),
-  refresh: action("refreshed"),
-};
 
 Vue.use(Vuex);
 
@@ -46,6 +40,7 @@ export default {
     onRefresh: {},
     onArchiveTask: {},
     onPinTask: {},
+    onCase: {},
     handleClick: {
       action: "refresh",
     }
@@ -57,21 +52,24 @@ export default {
   },
 };
 
+export const actionsData = {
+  onPinTask: action('pin-task'),
+  onArchiveTask: action('archive-task'),
+  onRefresh: action('refresh'),
+  refresh: action("refreshed"),
+  onCase: action("case"),
+};
+
 const Template = args => ({
   components: { "problem": Problem, },
   store,
-  methods: {
-    specialCase () {
-      action("refresh");
-    },
-  },
   data () {
       return { 
       	issue: args.issue,
       };
   },
   mounted () {},
-  template: `<problem v-bind:issue=issue v-on:special-case="specialCase"></problem>`,
+  template: `<problem v-bind:issue=issue></problem>`,
 });
 
 export const SimpleError = Template.bind({});

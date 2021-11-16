@@ -37,6 +37,8 @@ export default {
     refreshFeed () {
       this.$store.dispatch("podcasts/refresh", this.issue.url);
       this.$emit("special-case");
+      this.$emit("refresh");
+      this.$emit("case");
     },
     removeFeed () {
       this.$store.dispatch("podcasts/removePodcastURL", this.issue.url);
