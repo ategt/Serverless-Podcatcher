@@ -4,8 +4,6 @@ import yeast from "yeast";
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-//import podcasts from './modules/podcasts';
-
 
 Vue.use(Vuex);
 
@@ -23,8 +21,15 @@ const store = new Vuex.Store({
           action("refresh");
           action("refreshed");
         },
+        removePodcastURL ( _, url ) {
+          console.log("Remove URL");
+        },
       },
-      mutations: {},
+      mutations: {
+        removeError ( _state, id ) {
+          console.log("Remove Error");
+        },
+      },
     },
   },
   strict: debug,
@@ -41,13 +46,14 @@ export default {
     onArchiveTask: {},
     onPinTask: {},
     onCase: {},
+    handleBillButton: {
+      action: "bill-button",
+    },
     handleClick: {
       action: "refresh",
-    }
-  },
-  parameters: {
-    actions: {
-      handles: ['click', 'refresh'],
+    },
+    handleThing: {
+      action: "thing",
     },
   },
 };
@@ -58,18 +64,25 @@ export const actionsData = {
   onRefresh: action('refresh'),
   refresh: action("refreshed"),
   onCase: action("case"),
+  onBillButton: action("bill-button"),
 };
 
 const Template = args => ({
   components: { "problem": Problem, },
   store,
+  methods: {
+    bill: action("bill-button"),
+  },
   data () {
       return { 
       	issue: args.issue,
       };
   },
   mounted () {},
-  template: `<problem v-bind:issue=issue></problem>`,
+  template: `<div>
+               <button style="width:225px;font-size:xx-large;padding:0.5rem;border-radius:11px;" v-on:click="bill">Click Me</button>
+               <problem v-bind:issue=issue></problem>
+             </div>`,
 });
 
 export const SimpleError = Template.bind({});

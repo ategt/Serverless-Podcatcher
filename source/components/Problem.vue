@@ -39,8 +39,10 @@ export default {
       this.$emit("special-case");
       this.$emit("refresh");
       this.$emit("case");
+      this.$emit("pin-task");
     },
     removeFeed () {
+      this.$emit("thing");
       this.$store.dispatch("podcasts/removePodcastURL", this.issue.url);
       this.$store.commit("podcasts/removeError", this.issue.id);
     },
