@@ -19,12 +19,7 @@ const getters = {};
 // actions
 const actions = {
   addPodcastURL ({ commit, dispatch, state }, url ) {
-    getPodcast( url ).then(function (response) {
-      dispatch("update", response);
-    }).catch(function (error) {
-      commit("refreshError", { error, cast_url: url });
-    });
-
+    dispatch("refresh", url);
     const podcastSet = new Set(state.myPodcasts);
 
     podcastSet.add(url);
@@ -34,6 +29,13 @@ const actions = {
 
     commit("setMyPodcasts", tempPodcasts);
     dispatch("updatePodcastURLs");
+  },
+  refresh ({ commit, dispatch }, url ) {
+    getPodcast( url ).then(function (response) {
+      dispatch("update", response);
+    }).catch(function (error) {
+      commit("refreshError", { error, cast_url: url });
+    });
   },
   update ({ commit, state }, response ) {
     const rss_document = parseXml( response.data.contents );
@@ -113,6 +115,9 @@ const mutations = {
   },
   setMyPodcasts ( state, podcasts ) {
     state.myPodcasts = podcasts;
+  },
+  removeError ( state, id ) {
+    state.podcastErrorsList = state.podcastErrorsList.filter((item) => item.id !== id);
   },
 }
 

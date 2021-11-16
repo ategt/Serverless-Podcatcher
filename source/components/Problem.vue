@@ -35,11 +35,11 @@ export default {
   props: ['issue'],
   methods: {
     refreshFeed () {
-      this.$root.feedRefresher(this.issue.url);
+      this.$store.dispatch("podcasts/refresh", this.issue.url);
     },
     removeFeed () {
-      this.$root.removePodcastURL(this.issue.url);
-      this.$root.podcastErrorsList = this.$root.podcastErrorsList.filter((item) => item.id !== this.issue.id);
+      this.$store.dispatch("podcasts/removePodcastURL", this.issue.url);
+      this.$store.commit("podcasts/removeError", this.issue.id);
     },
   },
 };

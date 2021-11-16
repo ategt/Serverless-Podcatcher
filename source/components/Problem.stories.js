@@ -14,9 +14,7 @@ const Template = args => ({
       };
   },
   mounted () {},
-  template: `<div class="border">
-               <problem v-bind:issue=issue></problem>
-             </div>`,
+  template: `<problem v-bind:issue=issue></problem>`,
 });
 
 export const SimpleError = Template.bind({});
