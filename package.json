@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 9001",
-    "storybook:build": "build-storybook -c .storybook -o .out -s public"
+    "storybook:build": "build-storybook -c .storybook -o .out"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,8 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
+    "@storybook/builder-webpack5": "^6.3.12",
+    "@storybook/manager-webpack5": "^6.3.12",
     "@storybook/vue": "^6.3.12",
     "@vue/test-utils": "^1.2.2",
     "babel-loader": "^8.2.3",
