@@ -19,4 +19,11 @@ export function loadPodcastUrls () {
 */
 export function buildCorsProxyUrl ( url ) {
   return `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-}
+};
+
+/**
+  Save podcast urls to HTML5 local storage.
+*/
+export function savePodcastURLs ( podcasts ) {
+  localStorage.setItem(podcastURLsTAG, JSON.stringify(podcasts));
+};

@@ -81,6 +81,36 @@ function fileNameFromUrl(url) {
    return null;
 }
 
+function getMediafilename (media) {
+    let filename;
+    let titleBaseFilename = "";
+
+    // Try to generate the filename by the item title
+    if (media != null && media.title != null) {
+        const title = media.title;
+        titleBaseFilename = Array.from(title).map(letter => validCharSet.has(letter) ? letter : "_").join("").trim();
+
+        if (titleBaseFilename.length == 0) {
+          titleBaseFilename = Array.from(new Array(12)).map(_ => Math.floor(Math.random() * 26) + 'a'.charCodeAt(0)).map(code => String.fromCharCode(code)).join('');
+        }
+    }
+
+    const URLBaseFilename = fileNameFromUrl(media.media.url);
+
+    if (!titleBaseFilename == "") {
+        // Append extension
+        const FILENAME_MAX_LENGTH = 220;
+        if (titleBaseFilename.length > FILENAME_MAX_LENGTH) {
+            titleBaseFilename = titleBaseFilename.substring(0, FILENAME_MAX_LENGTH);
+        }
+        filename = titleBaseFilename + URLBaseFilename.match(/(\.\w{3,4})$/g)[0];
+    } else {
+        // Fall back on URL file name
+        filename = URLBaseFilename;
+    }
+    return filename;
+};
+
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined'){
-    module.exports =  { buildItem, processChannel, processRSS, assignIds, fileNameFromUrl };
+    module.exports =  { buildItem, processChannel, processRSS, assignIds, fileNameFromUrl, getMediafilename };
 }
