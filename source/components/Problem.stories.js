@@ -18,8 +18,6 @@ const store = new Vuex.Store({
       actions: {
         refresh ( _, url ) {
           console.log("refresh");
-          action("refresh");
-          action("refreshed");
         },
         removePodcastURL ( _, url ) {
           console.log("Remove URL");
@@ -41,31 +39,10 @@ export default {
     //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
   component: Problem,
-  argTypes: {
-    onRefresh: {},
-    onArchiveTask: {},
-    onPinTask: {},
-    onCase: {},
-    handleBillButton: {
-      action: "bill-button",
-    },
-    handleClick: {
-      action: "refresh",
-    },
-    handleThing: {
-      action: "thing",
-    },
-  },
+  argTypes: {},
 };
 
-export const actionsData = {
-  onPinTask: action('pin-task'),
-  onArchiveTask: action('archive-task'),
-  onRefresh: action('refresh'),
-  refresh: action("refreshed"),
-  onCase: action("case"),
-  onBillButton: action("bill-button"),
-};
+export const actionsData = {};
 
 const Template = args => ({
   components: { "problem": Problem, },
