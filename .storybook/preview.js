@@ -1,9 +1,9 @@
-import '../source/styles/index.css';
+// import '../source/styles/index.css';
 
-import Vuex from 'vuex';
-import Vue from 'vue';
+// import Vuex from 'vuex';
+// import Vue from 'vue';
 
-Vue.use(Vuex);
+// Vue.use(Vuex);
 
 //👇 Configures Storybook to log the actions( onArchiveTask and onPinTask ) in the UI.
 export const parameters = {
