@@ -1,6 +1,13 @@
 import { loadPodcastUrls } from '../../shared/index';
 import { saveAs } from 'file-saver';
 
+import { buildCorsProxyUrl } from '../shared/index';
+import { processRSS, assignIds } from '../shared/podcatcher';
+import { saveAs } from 'file-saver';
+import parseXml from 'parseXml';
+
+import Vue from 'vue';
+
 // initial state
 const state = () => ({
   podcastFeedsList: new Array(),
@@ -26,14 +33,16 @@ const actions = {
     vm.myPodcasts = tempPodcasts;
     this.updatePodcastURLs();
   },
-  addPodcastURL ({ commit, state, dispatch }, { url, feed }) {
-    try {
-      vm.podcastFeedsList = vm.podcastFeedsList.filter((item) => item.cast_url !== cast_url).concat(feed);
-      sessionStorage.setItem(cast_url, JSON.stringify(Object.assign({}, feed, {media: feed.media.slice(0,15)})));
-    } catch (error){
-      problems = JSON.stringify({feedsList: vm.podcastFeedsList, errorsList: vm.podcastErrorsList, sources: vm.myPodcasts});
-      saveAs(problems, "Problems.json");
-    }
+  update ({ state, }, response ) {
+    const rss_document = parseXml( response.data.contents );
+
+    let feed = processRSS(rss_document.children[0])[0];
+    feed.id = this.store.state.podcastFeedsList.filter((item) => item.stale === false).length + 1;
+    feed.media = assignIds(feed.media);
+    feed.cast_url = cast_url;
+    feed.stale = false;
+
+    commit("appendFeed", { url, feed });
   },
     removePodcastURL: function (url) {
         vm.myPodcasts = vm.myPodcasts.filter((cast_url) => cast_url !== url).map((cx) => cx);
@@ -121,6 +130,35 @@ const mutations = {
       saveAs(problems, "Problems.json");
     }
   },
+  markLoading ( state, cast_url ) {
+    if ( state.podcastFeedsList.filter((item) => item.cast_url === cast_url).length === 0 ) {
+      const oldResultRaw = sessionStorage.getItem( cast_url );
+
+      if ( oldResultRaw && oldResultRaw != null && oldResultRaw != undefined && oldResultRaw != "undefined" ) {
+        const feed = JSON.parse(oldResultRaw);
+        feed.info = "Loading...";
+        feed.stale = true;
+        state.podcastFeedsList = state.podcastFeedsList.concat(feed);
+      }
+    }
+  },
+  refreshError ( state, { error, cast_url }) {
+    const feeds = state.podcastFeedsList.filter((item) => item.cast_url === cast_url);
+
+    if (feeds.length > 0) {
+      feeds[0].info = "Error - See Details At Bottom";
+    }
+
+    const oldErrors = state.podcastErrorsList.filter((lerror) => lerror.url === cast_url);
+
+    if (oldErrors.length == 0) {
+      state.podcastErrorsList = vm.podcastErrorsList.concat({url:cast_url, error:error, id: vm.podcastErrorsList.length + 1});
+    } else {
+      const position = state.podcastErrorsList.indexOf(oldErrors[0]);
+      const ammendedError = Object.assign({}, oldErrors[0], {error:error});
+      Vue.set(state.podcastErrorsList, position, ammendedError);
+    }
+  },  
 }
 
 export default {
