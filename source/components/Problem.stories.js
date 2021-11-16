@@ -6,24 +6,17 @@ export default {
   component: Problem,
 };
 
-// const Template = args => ({
-//   components: { Problem, },
-//   setup() {
-//     return { args, };
-//   },
-//   template: '<Problem v-bind="args" />',
-// });
-
 const Template = args => ({
   components: { "problem": Problem, },
   data () {
-      return {
-          ...args,
+  	  console.log(args);
+      return { 
+      	issue: args.issue,
       };
   },
   mounted () {},
   template: `<div class="border">
-               <problem v-bind=args></problem>
+               <problem v-bind:issue=issue></problem>
              </div>`,
 });
 
