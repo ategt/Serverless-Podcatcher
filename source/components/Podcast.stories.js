@@ -3,7 +3,7 @@ import { result } from '../feed_fixture';
 import Podcast from './Podcast.vue';
 
 export default {
-  title: 'Podcast Feed Panel',
+  title: 'Podcast/Feed Panel',
     //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
   component: Podcast,
@@ -43,4 +43,10 @@ export const RealWorld = Template.bind({});
 RealWorld.args = {
  actionsData,
  channel: result,
+};
+
+export const BigRealWorld = Template.bind({});
+BigRealWorld.args = {
+ actionsData,
+ channel: Object.assign({}, result, {media: (new Array(25)).fill(result.media[0])}),
 };

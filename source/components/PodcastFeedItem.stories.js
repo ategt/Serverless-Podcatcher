@@ -3,7 +3,7 @@ import PodcastFeedItem from './PodcastFeedItem.vue';
 import { result } from '../feed_fixture';
 
 export default {
-  title: 'Podcast Feed Item',
+  title: 'Podcast/Feed Item',
     //👇 Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
   component: PodcastFeedItem,
