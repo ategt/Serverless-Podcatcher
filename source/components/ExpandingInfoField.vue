@@ -44,7 +44,7 @@ export default {
       }
     },
     confirmDelete () {
-      this.$root.removePodcastURL(this.$parent.channel.cast_url);
+      this.$emit("remove-podcast-url", this.$parent.channel.cast_url);
 
       let parentDiv = this.$el.parentElement;
 
@@ -76,3 +76,4 @@ export default {
   },
 };
 </script>
+<style type="text/css" src="../styles/index.css"></style>

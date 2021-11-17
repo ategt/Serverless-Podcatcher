@@ -49,3 +49,4 @@ export default {
   } 
 };
 </script>
+<style type="text/css" src="../index.css"></style>
