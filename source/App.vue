@@ -41,4 +41,4 @@ export default {
   },
 };
 </script>
-<style src="./styles/index.css"></style>
+<style src="./styles/index.css" scoped></style>

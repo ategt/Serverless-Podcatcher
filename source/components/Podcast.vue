@@ -32,8 +32,8 @@
   </div>
 </template>
 <script>
-import ExpandingInfoField from './components/ExpandingInfoField.vue';
-import PodcastFeedItem from './components/PodcastFeedItem.vue';
+import ExpandingInfoField from './ExpandingInfoField.vue';
+import PodcastFeedItem from './PodcastFeedItem.vue';
 
 export default {
   name: "podcast",

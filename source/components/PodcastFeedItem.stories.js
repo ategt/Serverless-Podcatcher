@@ -1,5 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import PodcastFeedItem from './PodcastFeedItem.vue';
+import { result } from '../feed_fixture';
 
 export default {
   title: 'Podcast Feed Item',
@@ -45,4 +46,28 @@ WithMedia.args = {
      url: "http://www.com/this-is-a-feed-url.xml",
    },
  },
+};
+
+export const RealWorldOne = Template.bind({});
+RealWorldOne.args = {
+ actionsData,
+ item: result.media[0],
+};
+
+export const RealWorldTwo = Template.bind({});
+RealWorldTwo.args = {
+ actionsData,
+ item: result.media[1],
+};
+
+export const RealWorldThree = Template.bind({});
+RealWorldThree.args = {
+ actionsData,
+ item: result.media[2],
+};
+
+export const RealWorldFour = Template.bind({});
+RealWorldFour.args = {
+ actionsData,
+ item: result.media[3],
 };
