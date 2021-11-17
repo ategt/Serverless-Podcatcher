@@ -42,28 +42,29 @@ export default {
   argTypes: {},
 };
 
-export const actionsData = {};
+export const actionsData = {
+  'podcasts-refresh': action("podcasts-refresh"),
+  'podcasts-remove-url': action("podcasts-remove-url"),
+  'podcasts-remove-error': action("podcasts-remove-error"),
+};
 
 const Template = args => ({
   components: { "problem": Problem, },
   store,
-  methods: {
-    bill: action("bill-button"),
-  },
   data () {
       return { 
       	issue: args.issue,
+        eventListeners: args.actionsData,
       };
   },
   mounted () {},
-  template: `<div>
-               <button style="width:225px;font-size:xx-large;padding:0.5rem;border-radius:11px;" v-on:click="bill">Click Me</button>
-               <problem v-bind:issue=issue></problem>
-             </div>`,
+  //<button style="width:225px;font-size:xx-large;padding:0.5rem;border-radius:11px;" v-on:click="bill">Click Me</button>
+  template: `<problem v-bind:issue=issue v-on="eventListeners"></problem>`,
 });
 
 export const SimpleError = Template.bind({});
 SimpleError.args = {
+  actionsData,
   issue: {
   	id: yeast(),
   	url: "http://www.com/some-feed-url",
