@@ -30,12 +30,14 @@
 <script>
 import AddPodcastFeedUrl from './components/AddPodcastFeedUrl.vue';
 import Problem from './components/Problem.vue';
+import Podcast from './components/Podcast.vue';
 
 export default {
   name: 'app',
   components: {
     'add-podcast-feed-url': AddPodcastFeedUrl,
     'problem': Problem,
+    'podcast': Podcast,
   },
 };
 </script>
