@@ -26,6 +26,7 @@
                         v-bind:item="item"
                         v-bind:index="index"
                         v-bind:key="item.guid"
+                        v-on:item-download="downloadItem"
                          ></podcast-feed-item>
       </div>
     </div>
@@ -53,6 +54,9 @@ export default {
     this.panelViewInit(this);
   },
   methods: {
+    downloadItem ( item ) {
+      this.$store.dispatch("podcasts/download", item);
+    },
     panelViewInit (context) {
       context.contentPane = context.$el.getElementsByClassName("content-pane-id")[0];
 

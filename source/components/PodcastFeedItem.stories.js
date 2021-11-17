@@ -19,12 +19,12 @@ const Template = args => ({
     "podcast-feed-item": PodcastFeedItem,
   },
   data () {
-      return {
-        item: args.item,
-        eventListeners: args.actionsData,
-      };
+    return {
+      item: args.item,
+      eventListeners: args.actionsData,
+    };
   },
-  template: `<podcast-feed-item v-bind:item="item"></podcast-feed-item>`,
+  template: `<podcast-feed-item v-bind:item="item" v-on="eventListeners"></podcast-feed-item>`,
 });
 
 export const NoMedia = Template.bind({});
