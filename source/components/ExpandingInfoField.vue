@@ -21,7 +21,7 @@
 <script>
 export default {
   name: "expanding-info-field",
-  props: ['channel'],
+  props: ['channel', 'show'],
   methods: {
     panelViewInit (context) {
       if (context.contentPane === undefined) {
@@ -33,6 +33,25 @@ export default {
         context.contentHeight = context.contentPane.offsetHeight;
         context.contentPane.classList.add("collapsed");
       }
+    },
+    parentClickedDelete () {
+      this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
+      const context = this;
+
+      const overlay = document.getElementById('background-overlay');
+      overlay.style.display = 'block';
+      overlay.addEventListener("click", function(event) {
+        overlay.style.display = 'none';
+        Array.from(context.$children).filter(child => child.$vnode.tag.includes("expanding-info-field")).forEach(item => item.$vnode.componentInstance.hideDeletePane());
+      });
+
+      const localFunction = this.panelViewInit;
+      const contentPane = this.contentPane;
+      this.contentPane.addEventListener("transitionend", function(event) {
+        if (event.target === contentPane) {
+          localFunction(context);
+        }
+      });
     },
     hideDeletePane () {
       const overlay = document.getElementById('background-overlay');

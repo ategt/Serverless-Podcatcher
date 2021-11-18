@@ -16,7 +16,7 @@
         <div class="title">{{ channel.title }}</div>
         <div class="button-correcting-div">
           <span class="delete-button" v-on:click="deleteClick">X</span>
-          <expanding-info-field></expanding-info-field>
+          <expanding-info-field v-bind:show="confirmDelete" v-bind:channel="channel"></expanding-info-field>
         </div>
       </div>
       <div class="description" v-html="channel.description"></div>
@@ -49,6 +49,7 @@ export default {
   data () {
     return {
       contentHeight: undefined,
+      confirmDelete: false,
       //maxHeight: this.contentHeight ? `${this.contentHeight}px` : "200px",
       //contentPane: this.$el,
     };
@@ -70,24 +71,10 @@ export default {
       }
     },
     deleteClick () {
-      this.contentPane.style["max-height"] = this.contentHeight ? `${this.contentHeight}px` : "200px";
-      const context = this;
-
-      const overlay = document.getElementById('background-overlay');
-      overlay.style.display = 'block';
-      overlay.addEventListener("click", function(event) {
-        overlay.style.display = 'none';
-        Array.from(context.$children).filter(child => child.$vnode.tag.includes("expanding-info-field")).forEach(item => item.$vnode.componentInstance.hideDeletePane());
-      });
-
-      const localFunction = this.panelViewInit;
-      const contentPane = this.contentPane;
-      this.contentPane.addEventListener("transitionend", function(event) {
-        if (event.target === contentPane) {
-          localFunction(context);
-        }
-      });
+      this.confirmDelete = true;
     },
   },
 };
 </script>
+<style src="../styles/index.css" scoped></style>
+<style src="../styles/main.css" scoped></style>
