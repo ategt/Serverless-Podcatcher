@@ -150,6 +150,7 @@ a {
   color: #646c73;
   border-radius: 9px;
   border: 1px solid #646c73;
+  cursor: default;
 }
 .add-url-form-input-div {
   width: -webkit-fill-available;

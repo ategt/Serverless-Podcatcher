@@ -31,8 +31,8 @@ export const NoMedia = Template.bind({});
 NoMedia.args = {
  actionsData,
  item: {
-   title: "Title",
-   description: "Description",
+   title: "Title of Podcast",
+   description: "The description of this wacky mock podcast would appear in this area.",
  },
 };
 
@@ -40,8 +40,8 @@ export const WithMedia = Template.bind({});
 WithMedia.args = {
  actionsData,
  item: {
-   title: "Title",
-   description: "Description",
+   title: "Episode Title",
+   description: "Description Area For The Description Of This Here Episode.",
    media: {
      url: "http://www.com/this-is-a-feed-url.xml",
    },

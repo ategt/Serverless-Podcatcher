@@ -334,3 +334,6 @@ span.delete-button {
     margin-bottom:10vh;*/
     z-index:500;
 }
+.no-download-link {
+    cursor: no-drop;
+}

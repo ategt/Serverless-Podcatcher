@@ -45,3 +45,4 @@ export default {
 };
 </script>
 <style src="../styles/index.css" scoped></style>
+<style src="../styles/main.css" scoped></style>
