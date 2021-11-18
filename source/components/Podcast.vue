@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="description" v-html="channel.description"></div>
-      <div class="media-panel" v-bind:class="{ 'feed-stale': channel.stale }">
+      <div class="media-panel" v-bind:class="{ 'feed-stale': channel.stale }" v-if="channel.media.length">
         <podcast-feed-item 
                         v-for="(item, index) in channel.media"
                         v-bind:item="item"
@@ -28,6 +28,9 @@
                         v-bind:key="item.guid"
                         v-on:item-download="downloadItem"
                          ></podcast-feed-item>
+      </div>
+      <div class="media-panel media-panel-empty" v-bind:class="{ 'feed-stale': channel.stale }" v-else>
+        <span>- No Media -</span>
       </div>
     </div>
   </div>

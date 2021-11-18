@@ -191,3 +191,9 @@ a {
 .issue-list {
   width: 100%;
 }
+.media-panel-empty {
+  text-align: center;
+  font-size: 6em;
+  margin: 0.4em 0em 0em 0em;
+  height: unset;
+}

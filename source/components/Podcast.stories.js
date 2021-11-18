@@ -53,3 +53,26 @@ export const BigRealWorld = Template.bind({});
 BigRealWorld.args = {
  channel: Object.assign({}, result, {media: (new Array(25)).fill(result.media[0]).map(item => Object.assign({}, item, {guid: yeast()}))}),
 };
+
+export const StaleRealWorld = Template.bind({});
+StaleRealWorld.args = {
+ channel: Object.assign({}, result, {stale: true}),
+};
+
+export const StaleBigRealWorld = Template.bind({});
+StaleBigRealWorld.args = {
+ channel: Object.assign({}, 
+                        result, 
+                        {media: (new Array(25)).fill(result.media[0]).map(item => Object.assign({}, item, {guid: yeast()}))}, 
+                        {stale: true},
+                        {info: "Loading..."}),
+};
+
+export const ErrorBigRealWorld = Template.bind({});
+ErrorBigRealWorld.args = {
+ channel: Object.assign({}, 
+                        result, 
+                        {media: (new Array(25)).fill(result.media[0]).map(item => Object.assign({}, item, {guid: yeast()}))}, 
+                        {stale: true},
+                        {info: "Error - See Details At Bottom"}),
+};
