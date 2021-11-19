@@ -1,0 +1,4244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Add Podcast Feed URL Base Form 1`] = `
+<div
+  class="add-url-form"
+>
+  <div
+    class="add-url-form-subpanel"
+  >
+    <div
+      class="add-url-form-input-div"
+    >
+      <input
+        class="add-url-form-input"
+        placeholder="Feed URL To Be Added"
+      />
+    </div>
+     
+    <div
+      class="add-podcast-feed-button"
+    >
+      
+      Add Podcast
+    
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Expanding Info Field Base Form 1`] = `
+<div
+  class="delete-confirm-container content content-pane-id popup collapsed"
+>
+  <div
+    class="delete-confirm-content content-hidden hidden content-hidden-id"
+  >
+    <div
+      class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+    >
+      
+      Removal Succeded
+    
+    </div>
+     
+    <div
+      class="delete-confirm-container-text hidable"
+    >
+      
+      Please confirm to perminently delete
+    
+    </div>
+     
+    <div
+      class="delete-button-container delete-button-sub-container"
+    >
+      <div
+        class="confirm-delete-button hidable"
+      >
+        
+        Confirm
+      
+      </div>
+       
+      <div
+        class="cancel-delete-button hidable"
+      >
+        
+        Cancel
+      
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Item No Media 1`] = `
+<div
+  class="item"
+>
+  <div
+    class="download-button-holder"
+  >
+    <span
+      class="download-symbol download-button"
+    />
+  </div>
+   
+  <div
+    class="item-title"
+  >
+    
+    Title of Podcast
+  
+  </div>
+   
+  <div
+    class="item-description"
+  >
+    The description of this wacky mock podcast would appear in this area.
+  </div>
+   
+  <div
+    class="item-enclosure"
+  >
+    <a
+      class="no-download-link"
+    >
+      No Media
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Item Real World Four 1`] = `
+<div
+  class="item"
+>
+  <div
+    class="download-button-holder"
+  >
+    <span
+      class="download-symbol download-button"
+    />
+  </div>
+   
+  <div
+    class="item-title"
+  >
+    
+    #1941: Bryology This, Pal
+  
+  </div>
+   
+  <div
+    class="item-description"
+  >
+    This week on The Best of Car Talk, Jenny's fiance, a budding bryologist, thinks she's crazy because she swears her car is more difficult to start when its low on gas. Should he stick to moss and stay away from fuel dynamics, let alone female psychology? Elsewhere, Angela's smelling something sweet from her dashboard, but the cost to fix it will be mighty sour; Eric is wondering how a $4 part could require $358 in labor to replace; and David is trying to decide which of two heaps to dump, when the answer should probably be both. And, in the midst of New England foliage season, New Hampshire native Kurt has lots of time in traffic to profile the tourist drivers slowing him down the most. All this and more, this week on the Best of Car Talk.
+  </div>
+   
+  <div
+    class="item-enclosure"
+  >
+    <a
+      class="download-link"
+      href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191009_cartalk_1941_bryology-a00f517c-30a0-4451-bfe4-a183aa90c457.mp3?awCollectionId=510208&awEpisodeId=769380123&orgId=1&d=3251&p=510208&story=769380123&t=podcast&e=769380123&size=51506880&ft=pod&f=510208"
+    >
+      link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Item Real World One 1`] = `
+<div
+  class="item"
+>
+  <div
+    class="download-button-holder"
+  >
+    <span
+      class="download-symbol download-button"
+    />
+  </div>
+   
+  <div
+    class="item-title"
+  >
+    
+    #1944: I Stink, Therefore I Am
+  
+  </div>
+   
+  <div
+    class="item-description"
+  >
+    This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+  </div>
+   
+  <div
+    class="item-enclosure"
+  >
+    <a
+      class="download-link"
+      href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+    >
+      link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Item Real World Three 1`] = `
+<div
+  class="item"
+>
+  <div
+    class="download-button-holder"
+  >
+    <span
+      class="download-symbol download-button"
+    />
+  </div>
+   
+  <div
+    class="item-title"
+  >
+    
+    #1942: A Bevy of Bad Options
+  
+  </div>
+   
+  <div
+    class="item-description"
+  >
+    This week on The Best of Car Talk, should Bill risk humiliation and passenger nausea by trying to learn how to drive a sitck shift in time for the high school dance? Given that his options are the family minivan or station wagon, he may need to go for it, and have a handy supply of barf bags on hand. Elsewhere, Jane's neighbor's dog is biting her Subaru's tires and chasing her car. Jane is thinking a healthy dose of pepper spray may help dissuade Fido, but Tom and Ray may have a more (or less ) humane solution. Also, Abby's Accord has a burning smell since she accidentally backed down a friend's steep driveway in drive; Steve promised his wife he could fix her oil problem three months ago, but is stumped; and can Ray convince John his air conditioning is making noise, even when it's off? All this, plus a quiz for the Philosopher King, and more, this week on The Best of Car Talk.
+  </div>
+   
+  <div
+    class="item-enclosure"
+  >
+    <a
+      class="download-link"
+      href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191015_cartalk_1942_bad_options-1b57531a-1d88-46cb-a586-6a77ca440df1.mp3?awCollectionId=510208&awEpisodeId=770347920&orgId=1&d=3263&p=510208&story=770347920&t=podcast&e=770347920&size=51937641&ft=pod&f=510208"
+    >
+      link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Item Real World Two 1`] = `
+<div
+  class="item"
+>
+  <div
+    class="download-button-holder"
+  >
+    <span
+      class="download-symbol download-button"
+    />
+  </div>
+   
+  <div
+    class="item-title"
+  >
+    
+    #1943: Cream Rinse
+  
+  </div>
+   
+  <div
+    class="item-description"
+  >
+    This week on The Best of Car Talk, Tom and Ray stray ever further into terra incognita, as they try to help Sharon figure out why her hair looks lousy after a long drive. Procter and Gamble may have issues with Ray's diagnosis. Elsewhere, Sharon's car is making a "lurid groan" when she turns. The noise is making her a star at the retirement home, but should she be worried about it? Also, from the marital disputes department, Cathy thinks her husband erred by driving down Mt. Washington in 1st gear rather than riding the brakes; and Lynn is worried that a cold water car wash on a hot day can warp her brakes. And, has the New York Times really found the world's funniest joke? All this and more, this week on The Best of Car Talk.
+  </div>
+   
+  <div
+    class="item-enclosure"
+  >
+    <a
+      class="download-link"
+      href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191022_cartalk_1943_cream_rinse-ef12a01b-870e-44bc-8759-655f44beec28.mp3?awCollectionId=510208&awEpisodeId=772216030&orgId=1&d=3260&p=510208&story=772216030&t=podcast&e=772216030&size=51831723&ft=pod&f=510208"
+    >
+      link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Item With Media 1`] = `
+<div
+  class="item"
+>
+  <div
+    class="download-button-holder"
+  >
+    <span
+      class="download-symbol download-button"
+    />
+  </div>
+   
+  <div
+    class="item-title"
+  >
+    
+    Episode Title
+  
+  </div>
+   
+  <div
+    class="item-description"
+  >
+    Description Area For The Description Of This Here Episode.
+  </div>
+   
+  <div
+    class="item-enclosure"
+  >
+    <a
+      class="download-link"
+      href="http://www.com/this-is-a-feed-url.xml"
+    >
+      link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Panel Big Real World 1`] = `
+<div
+  class="feed-panel"
+>
+  <div
+    class="feed-image-panel"
+  >
+    <div
+      class="feed-image-container"
+    >
+      <img
+        class="feed-image"
+        src="https://media.npr.org/images/podcasts/primary/icon_510208-1355b17f00857a9953a393bbdbf121a7c1c6bef3.jpg?s=1400"
+      />
+    </div>
+     
+    <div
+      class="feed-info-container"
+    >
+      <!---->
+    </div>
+  </div>
+   
+  <div>
+    <div
+      class="title-bar"
+    >
+      <div
+        class="title-correcting-div"
+      />
+       
+      <div
+        class="title"
+      >
+        Car Talk
+      </div>
+       
+      <div
+        class="button-correcting-div"
+      >
+        <span
+          class="delete-button"
+        >
+          X
+        </span>
+         
+        <div
+          class="delete-confirm-container content content-pane-id popup collapsed"
+        >
+          <div
+            class="delete-confirm-content content-hidden hidden content-hidden-id"
+          >
+            <div
+              class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+            >
+              
+      Removal Succeded
+    
+            </div>
+             
+            <div
+              class="delete-confirm-container-text hidable"
+            >
+              
+      Please confirm to perminently delete
+    
+            </div>
+             
+            <div
+              class="delete-button-container delete-button-sub-container"
+            >
+              <div
+                class="confirm-delete-button hidable"
+              >
+                
+        Confirm
+      
+              </div>
+               
+              <div
+                class="cancel-delete-button hidable"
+              >
+                
+        Cancel
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="description"
+    >
+      America's funniest auto mechanics take calls from weary car owners all over the country, and crack wise while they diagnose Dodges and dismiss Diahatsus. You don't have to know anything about cars to love this one hour weekly laugh fest.
+    </div>
+     
+    <div
+      class="media-panel"
+    >
+      <div
+        class="item"
+        index="0"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="1"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="2"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="3"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="4"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="5"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="6"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="7"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="8"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="9"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="10"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="11"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="12"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="13"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="14"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="15"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="16"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="17"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="18"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="19"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="20"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="21"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="22"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="23"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="24"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Panel Empty Media 1`] = `
+<div
+  class="feed-panel"
+>
+  <div
+    class="feed-image-panel"
+  >
+    <div
+      class="feed-image-container"
+    >
+      <img
+        class="feed-image"
+        src="https://media.npr.org/images/podcasts/primary/icon_510208-1355b17f00857a9953a393bbdbf121a7c1c6bef3.jpg?s=1400"
+      />
+    </div>
+     
+    <div
+      class="feed-info-container"
+    >
+      <!---->
+    </div>
+  </div>
+   
+  <div>
+    <div
+      class="title-bar"
+    >
+      <div
+        class="title-correcting-div"
+      />
+       
+      <div
+        class="title"
+      >
+        Car Talk
+      </div>
+       
+      <div
+        class="button-correcting-div"
+      >
+        <span
+          class="delete-button"
+        >
+          X
+        </span>
+         
+        <div
+          class="delete-confirm-container content content-pane-id popup collapsed"
+        >
+          <div
+            class="delete-confirm-content content-hidden hidden content-hidden-id"
+          >
+            <div
+              class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+            >
+              
+      Removal Succeded
+    
+            </div>
+             
+            <div
+              class="delete-confirm-container-text hidable"
+            >
+              
+      Please confirm to perminently delete
+    
+            </div>
+             
+            <div
+              class="delete-button-container delete-button-sub-container"
+            >
+              <div
+                class="confirm-delete-button hidable"
+              >
+                
+        Confirm
+      
+              </div>
+               
+              <div
+                class="cancel-delete-button hidable"
+              >
+                
+        Cancel
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="description"
+    >
+      America's funniest auto mechanics take calls from weary car owners all over the country, and crack wise while they diagnose Dodges and dismiss Diahatsus. You don't have to know anything about cars to love this one hour weekly laugh fest.
+    </div>
+     
+    <div
+      class="media-panel media-panel-empty"
+    >
+      <span>
+        - No Media -
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Panel Error Big Real World 1`] = `
+<div
+  class="feed-panel"
+>
+  <div
+    class="feed-image-panel"
+  >
+    <div
+      class="feed-image-container"
+    >
+      <img
+        class="feed-image"
+        src="https://media.npr.org/images/podcasts/primary/icon_510208-1355b17f00857a9953a393bbdbf121a7c1c6bef3.jpg?s=1400"
+      />
+    </div>
+     
+    <div
+      class="feed-info-container"
+    >
+      <div>
+        
+        Error - See Details At Bottom
+      
+      </div>
+    </div>
+  </div>
+   
+  <div>
+    <div
+      class="title-bar"
+    >
+      <div
+        class="title-correcting-div"
+      />
+       
+      <div
+        class="title"
+      >
+        Car Talk
+      </div>
+       
+      <div
+        class="button-correcting-div"
+      >
+        <span
+          class="delete-button"
+        >
+          X
+        </span>
+         
+        <div
+          class="delete-confirm-container content content-pane-id popup collapsed"
+        >
+          <div
+            class="delete-confirm-content content-hidden hidden content-hidden-id"
+          >
+            <div
+              class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+            >
+              
+      Removal Succeded
+    
+            </div>
+             
+            <div
+              class="delete-confirm-container-text hidable"
+            >
+              
+      Please confirm to perminently delete
+    
+            </div>
+             
+            <div
+              class="delete-button-container delete-button-sub-container"
+            >
+              <div
+                class="confirm-delete-button hidable"
+              >
+                
+        Confirm
+      
+              </div>
+               
+              <div
+                class="cancel-delete-button hidable"
+              >
+                
+        Cancel
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="description"
+    >
+      America's funniest auto mechanics take calls from weary car owners all over the country, and crack wise while they diagnose Dodges and dismiss Diahatsus. You don't have to know anything about cars to love this one hour weekly laugh fest.
+    </div>
+     
+    <div
+      class="media-panel feed-stale"
+    >
+      <div
+        class="item"
+        index="0"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="1"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="2"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="3"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="4"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="5"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="6"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="7"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="8"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="9"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="10"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="11"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="12"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="13"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="14"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="15"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="16"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="17"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="18"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="19"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="20"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="21"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="22"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="23"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="24"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Panel One Media Item 1`] = `
+<div
+  class="feed-panel"
+>
+  <div
+    class="feed-image-panel"
+  >
+    <div
+      class="feed-image-container"
+    >
+      <img
+        class="feed-image"
+        src="https://media.npr.org/images/podcasts/primary/icon_510208-1355b17f00857a9953a393bbdbf121a7c1c6bef3.jpg?s=1400"
+      />
+    </div>
+     
+    <div
+      class="feed-info-container"
+    >
+      <!---->
+    </div>
+  </div>
+   
+  <div>
+    <div
+      class="title-bar"
+    >
+      <div
+        class="title-correcting-div"
+      />
+       
+      <div
+        class="title"
+      >
+        Car Talk
+      </div>
+       
+      <div
+        class="button-correcting-div"
+      >
+        <span
+          class="delete-button"
+        >
+          X
+        </span>
+         
+        <div
+          class="delete-confirm-container content content-pane-id popup collapsed"
+        >
+          <div
+            class="delete-confirm-content content-hidden hidden content-hidden-id"
+          >
+            <div
+              class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+            >
+              
+      Removal Succeded
+    
+            </div>
+             
+            <div
+              class="delete-confirm-container-text hidable"
+            >
+              
+      Please confirm to perminently delete
+    
+            </div>
+             
+            <div
+              class="delete-button-container delete-button-sub-container"
+            >
+              <div
+                class="confirm-delete-button hidable"
+              >
+                
+        Confirm
+      
+              </div>
+               
+              <div
+                class="cancel-delete-button hidable"
+              >
+                
+        Cancel
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="description"
+    >
+      America's funniest auto mechanics take calls from weary car owners all over the country, and crack wise while they diagnose Dodges and dismiss Diahatsus. You don't have to know anything about cars to love this one hour weekly laugh fest.
+    </div>
+     
+    <div
+      class="media-panel"
+    >
+      <div
+        class="item"
+        index="0"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Panel Real World 1`] = `
+<div
+  class="feed-panel"
+>
+  <div
+    class="feed-image-panel"
+  >
+    <div
+      class="feed-image-container"
+    >
+      <img
+        class="feed-image"
+        src="https://media.npr.org/images/podcasts/primary/icon_510208-1355b17f00857a9953a393bbdbf121a7c1c6bef3.jpg?s=1400"
+      />
+    </div>
+     
+    <div
+      class="feed-info-container"
+    >
+      <!---->
+    </div>
+  </div>
+   
+  <div>
+    <div
+      class="title-bar"
+    >
+      <div
+        class="title-correcting-div"
+      />
+       
+      <div
+        class="title"
+      >
+        Car Talk
+      </div>
+       
+      <div
+        class="button-correcting-div"
+      >
+        <span
+          class="delete-button"
+        >
+          X
+        </span>
+         
+        <div
+          class="delete-confirm-container content content-pane-id popup collapsed"
+        >
+          <div
+            class="delete-confirm-content content-hidden hidden content-hidden-id"
+          >
+            <div
+              class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+            >
+              
+      Removal Succeded
+    
+            </div>
+             
+            <div
+              class="delete-confirm-container-text hidable"
+            >
+              
+      Please confirm to perminently delete
+    
+            </div>
+             
+            <div
+              class="delete-button-container delete-button-sub-container"
+            >
+              <div
+                class="confirm-delete-button hidable"
+              >
+                
+        Confirm
+      
+              </div>
+               
+              <div
+                class="cancel-delete-button hidable"
+              >
+                
+        Cancel
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="description"
+    >
+      America's funniest auto mechanics take calls from weary car owners all over the country, and crack wise while they diagnose Dodges and dismiss Diahatsus. You don't have to know anything about cars to love this one hour weekly laugh fest.
+    </div>
+     
+    <div
+      class="media-panel"
+    >
+      <div
+        class="item"
+        index="0"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="1"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1943: Cream Rinse
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Tom and Ray stray ever further into terra incognita, as they try to help Sharon figure out why her hair looks lousy after a long drive. Procter and Gamble may have issues with Ray's diagnosis. Elsewhere, Sharon's car is making a "lurid groan" when she turns. The noise is making her a star at the retirement home, but should she be worried about it? Also, from the marital disputes department, Cathy thinks her husband erred by driving down Mt. Washington in 1st gear rather than riding the brakes; and Lynn is worried that a cold water car wash on a hot day can warp her brakes. And, has the New York Times really found the world's funniest joke? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191022_cartalk_1943_cream_rinse-ef12a01b-870e-44bc-8759-655f44beec28.mp3?awCollectionId=510208&awEpisodeId=772216030&orgId=1&d=3260&p=510208&story=772216030&t=podcast&e=772216030&size=51831723&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="2"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1942: A Bevy of Bad Options
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, should Bill risk humiliation and passenger nausea by trying to learn how to drive a sitck shift in time for the high school dance? Given that his options are the family minivan or station wagon, he may need to go for it, and have a handy supply of barf bags on hand. Elsewhere, Jane's neighbor's dog is biting her Subaru's tires and chasing her car. Jane is thinking a healthy dose of pepper spray may help dissuade Fido, but Tom and Ray may have a more (or less ) humane solution. Also, Abby's Accord has a burning smell since she accidentally backed down a friend's steep driveway in drive; Steve promised his wife he could fix her oil problem three months ago, but is stumped; and can Ray convince John his air conditioning is making noise, even when it's off? All this, plus a quiz for the Philosopher King, and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191015_cartalk_1942_bad_options-1b57531a-1d88-46cb-a586-6a77ca440df1.mp3?awCollectionId=510208&awEpisodeId=770347920&orgId=1&d=3263&p=510208&story=770347920&t=podcast&e=770347920&size=51937641&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="3"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1941: Bryology This, Pal
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Jenny's fiance, a budding bryologist, thinks she's crazy because she swears her car is more difficult to start when its low on gas. Should he stick to moss and stay away from fuel dynamics, let alone female psychology? Elsewhere, Angela's smelling something sweet from her dashboard, but the cost to fix it will be mighty sour; Eric is wondering how a $4 part could require $358 in labor to replace; and David is trying to decide which of two heaps to dump, when the answer should probably be both. And, in the midst of New England foliage season, New Hampshire native Kurt has lots of time in traffic to profile the tourist drivers slowing him down the most. All this and more, this week on the Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191009_cartalk_1941_bryology-a00f517c-30a0-4451-bfe4-a183aa90c457.mp3?awCollectionId=510208&awEpisodeId=769380123&orgId=1&d=3251&p=510208&story=769380123&t=podcast&e=769380123&size=51506880&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Panel Stale Big Real World 1`] = `
+<div
+  class="feed-panel"
+>
+  <div
+    class="feed-image-panel"
+  >
+    <div
+      class="feed-image-container"
+    >
+      <img
+        class="feed-image"
+        src="https://media.npr.org/images/podcasts/primary/icon_510208-1355b17f00857a9953a393bbdbf121a7c1c6bef3.jpg?s=1400"
+      />
+    </div>
+     
+    <div
+      class="feed-info-container"
+    >
+      <div>
+        
+        Loading...
+      
+      </div>
+    </div>
+  </div>
+   
+  <div>
+    <div
+      class="title-bar"
+    >
+      <div
+        class="title-correcting-div"
+      />
+       
+      <div
+        class="title"
+      >
+        Car Talk
+      </div>
+       
+      <div
+        class="button-correcting-div"
+      >
+        <span
+          class="delete-button"
+        >
+          X
+        </span>
+         
+        <div
+          class="delete-confirm-container content content-pane-id popup collapsed"
+        >
+          <div
+            class="delete-confirm-content content-hidden hidden content-hidden-id"
+          >
+            <div
+              class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+            >
+              
+      Removal Succeded
+    
+            </div>
+             
+            <div
+              class="delete-confirm-container-text hidable"
+            >
+              
+      Please confirm to perminently delete
+    
+            </div>
+             
+            <div
+              class="delete-button-container delete-button-sub-container"
+            >
+              <div
+                class="confirm-delete-button hidable"
+              >
+                
+        Confirm
+      
+              </div>
+               
+              <div
+                class="cancel-delete-button hidable"
+              >
+                
+        Cancel
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="description"
+    >
+      America's funniest auto mechanics take calls from weary car owners all over the country, and crack wise while they diagnose Dodges and dismiss Diahatsus. You don't have to know anything about cars to love this one hour weekly laugh fest.
+    </div>
+     
+    <div
+      class="media-panel feed-stale"
+    >
+      <div
+        class="item"
+        index="0"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="1"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="2"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="3"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="4"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="5"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="6"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="7"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="8"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="9"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="10"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="11"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="12"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="13"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="14"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="15"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="16"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="17"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="18"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="19"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="20"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="21"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="22"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="23"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="24"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Podcast/Feed Panel Stale Real World 1`] = `
+<div
+  class="feed-panel"
+>
+  <div
+    class="feed-image-panel"
+  >
+    <div
+      class="feed-image-container"
+    >
+      <img
+        class="feed-image"
+        src="https://media.npr.org/images/podcasts/primary/icon_510208-1355b17f00857a9953a393bbdbf121a7c1c6bef3.jpg?s=1400"
+      />
+    </div>
+     
+    <div
+      class="feed-info-container"
+    >
+      <!---->
+    </div>
+  </div>
+   
+  <div>
+    <div
+      class="title-bar"
+    >
+      <div
+        class="title-correcting-div"
+      />
+       
+      <div
+        class="title"
+      >
+        Car Talk
+      </div>
+       
+      <div
+        class="button-correcting-div"
+      >
+        <span
+          class="delete-button"
+        >
+          X
+        </span>
+         
+        <div
+          class="delete-confirm-container content content-pane-id popup collapsed"
+        >
+          <div
+            class="delete-confirm-content content-hidden hidden content-hidden-id"
+          >
+            <div
+              class="delete-confirm-container-text delete-confirm-container-result custom-hidden"
+            >
+              
+      Removal Succeded
+    
+            </div>
+             
+            <div
+              class="delete-confirm-container-text hidable"
+            >
+              
+      Please confirm to perminently delete
+    
+            </div>
+             
+            <div
+              class="delete-button-container delete-button-sub-container"
+            >
+              <div
+                class="confirm-delete-button hidable"
+              >
+                
+        Confirm
+      
+              </div>
+               
+              <div
+                class="cancel-delete-button hidable"
+              >
+                
+        Cancel
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="description"
+    >
+      America's funniest auto mechanics take calls from weary car owners all over the country, and crack wise while they diagnose Dodges and dismiss Diahatsus. You don't have to know anything about cars to love this one hour weekly laugh fest.
+    </div>
+     
+    <div
+      class="media-panel feed-stale"
+    >
+      <div
+        class="item"
+        index="0"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1944: I Stink, Therefore I Am
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Fran and her boyfriend are both jocks, and as a result her Taurus smells like a locker room. Will a few dozen Odor Eaters hanging from the rear view mirror get rid of the stink? Elsewhere, Fritzie has two Peugeots, one of which has died. Should she keep it around, so its partner has company? Also, Margo's Dad gave her his Cadillac, but her noisy brakes have Tom and Ray convinced Dad may be trying to bump Margo off; Matt wants to cure his wife of her habitual door slamming; and "Martha" bought a used van from a  dealer six months ago, but has yet to be billed or pay a single cent for it. Should she keep quiet, 'fess up, or trade it in for a new van? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191029_cartalk_1944_stink-5cf22565-ab90-4665-b654-edab976d9d35.mp3?awCollectionId=510208&awEpisodeId=774348596&orgId=1&d=3327&p=510208&story=774348596&t=podcast&e=774348596&size=52281249&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="1"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1943: Cream Rinse
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Tom and Ray stray ever further into terra incognita, as they try to help Sharon figure out why her hair looks lousy after a long drive. Procter and Gamble may have issues with Ray's diagnosis. Elsewhere, Sharon's car is making a "lurid groan" when she turns. The noise is making her a star at the retirement home, but should she be worried about it? Also, from the marital disputes department, Cathy thinks her husband erred by driving down Mt. Washington in 1st gear rather than riding the brakes; and Lynn is worried that a cold water car wash on a hot day can warp her brakes. And, has the New York Times really found the world's funniest joke? All this and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191022_cartalk_1943_cream_rinse-ef12a01b-870e-44bc-8759-655f44beec28.mp3?awCollectionId=510208&awEpisodeId=772216030&orgId=1&d=3260&p=510208&story=772216030&t=podcast&e=772216030&size=51831723&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="2"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1942: A Bevy of Bad Options
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, should Bill risk humiliation and passenger nausea by trying to learn how to drive a sitck shift in time for the high school dance? Given that his options are the family minivan or station wagon, he may need to go for it, and have a handy supply of barf bags on hand. Elsewhere, Jane's neighbor's dog is biting her Subaru's tires and chasing her car. Jane is thinking a healthy dose of pepper spray may help dissuade Fido, but Tom and Ray may have a more (or less ) humane solution. Also, Abby's Accord has a burning smell since she accidentally backed down a friend's steep driveway in drive; Steve promised his wife he could fix her oil problem three months ago, but is stumped; and can Ray convince John his air conditioning is making noise, even when it's off? All this, plus a quiz for the Philosopher King, and more, this week on The Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191015_cartalk_1942_bad_options-1b57531a-1d88-46cb-a586-6a77ca440df1.mp3?awCollectionId=510208&awEpisodeId=770347920&orgId=1&d=3263&p=510208&story=770347920&t=podcast&e=770347920&size=51937641&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+      <div
+        class="item"
+        index="3"
+      >
+        <div
+          class="download-button-holder"
+        >
+          <span
+            class="download-symbol download-button"
+          />
+        </div>
+         
+        <div
+          class="item-title"
+        >
+          
+    #1941: Bryology This, Pal
+  
+        </div>
+         
+        <div
+          class="item-description"
+        >
+          This week on The Best of Car Talk, Jenny's fiance, a budding bryologist, thinks she's crazy because she swears her car is more difficult to start when its low on gas. Should he stick to moss and stay away from fuel dynamics, let alone female psychology? Elsewhere, Angela's smelling something sweet from her dashboard, but the cost to fix it will be mighty sour; Eric is wondering how a $4 part could require $358 in labor to replace; and David is trying to decide which of two heaps to dump, when the answer should probably be both. And, in the midst of New England foliage season, New Hampshire native Kurt has lots of time in traffic to profile the tourist drivers slowing him down the most. All this and more, this week on the Best of Car Talk.
+        </div>
+         
+        <div
+          class="item-enclosure"
+        >
+          <a
+            class="download-link"
+            href="https://play.podtrac.com/npr-510208/edge1.pod.npr.org/anon.npr-podcasts/podcast/npr/cartalk/2019/10/20191009_cartalk_1941_bryology-a00f517c-30a0-4451-bfe4-a183aa90c457.mp3?awCollectionId=510208&awEpisodeId=769380123&orgId=1&d=3251&p=510208&story=769380123&t=podcast&e=769380123&size=51506880&ft=pod&f=510208"
+          >
+            link
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Problem Simple Error 1`] = `
+<div
+  class="issue-pane"
+>
+  <div
+    class="issue-panel-retry-wrapper"
+  >
+    <div
+      class="issue-panel"
+    >
+      <div
+        class="issue-main"
+      >
+        <span
+          class="issue-explain"
+        >
+          <span
+            class="issue-text"
+          >
+            Could not load 
+          </span>
+           
+          <span
+            class="issue-url"
+          >
+            http://www.com/some-feed-url
+          </span>
+        </span>
+      </div>
+       
+      <div
+        class="issue-info"
+      >
+        <div
+          class="issue-refresh issue-info-item"
+        >
+          
+          Click to Retry
+        
+        </div>
+         
+        <div
+          class="issue-message issue-info-item"
+        >
+          
+          The Error Message Is Here. 
+        
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="issue-panel-remove-wrapper"
+  >
+    <div
+      class="issue-panel-remove-top"
+    />
+     
+    <div
+      class="issue-panel-remove-content"
+    >
+      <span
+        class="remove-feed-button issue-remove-feed-button"
+      >
+        X
+      </span>
+    </div>
+     
+    <div
+      class="issue-panel-remove-bottom"
+    />
+  </div>
+</div>
+`;
