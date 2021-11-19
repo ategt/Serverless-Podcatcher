@@ -1,6 +1,15 @@
+import { initScreenshot, withScreenshot } from "storybook-chrome-screenshot/lib";
 import { action } from '@storybook/addon-actions';
+//import { addDecorator } from '@storybook/vue';
 import Problem from './Problem.vue';
 import yeast from "yeast";
+
+// // Decorator to center-align all stories
+// addDecorator(() => ({
+//   template: '<div style="textAlign: center"><story/></div>',
+// }));
+
+//addDecorator(initScreenshot());
 
 export default {
   title: 'Problem',

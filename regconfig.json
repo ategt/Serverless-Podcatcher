@@ -1,0 +1,26 @@
+{
+  "core": {
+    "workingDir": ".reg",
+    "actualDir": "__screenshots__",
+    "expectedDir": "bill",
+    "thresholdRate": 0,
+    "addIgnore": true,
+    "ximgdiff": {
+      "invocationType": "client"
+    }
+  },
+  "plugins": {
+  	"reg-simple-keygen-plugin": {
+      "expectedKey": "${TARGET_GIT_COMMIT}",
+      "actualKey": "${GIT_COMMIT}"
+    },
+    "reg-publish-filesystem-plugin": {
+	  "bucketName": "bucketName",
+	  "acl": "acl",
+	  "sse": "sse",
+	  "sseKMSKeyId": "sseKMSKeyId",
+	  "customDomain": "customDomain",
+	  "pathPrefix": "pathPrefix"
+	}
+  }
+}

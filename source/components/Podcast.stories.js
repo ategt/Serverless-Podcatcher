@@ -1,4 +1,4 @@
-import { result } from '../feed_fixture';
+import { result as remoteResult, imageB64, localResult as result } from '../feed_fixture';
 import Podcast from './Podcast.vue';
 import yeast from 'yeast';
 import Vuex from 'vuex';
