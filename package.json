@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config=config.js",
     "storybook": "start-storybook -p 9001",
-    "storybook:build": "build-storybook -c .storybook -o .out"
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "build:test": "node node_modules/webpack/bin/webpack.js --mode development --config build/webpack.config.custom.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "@storybook/manager-webpack5": "^6.3.12",
     "@storybook/vue": "^6.3.12",
     "@vue/test-utils": "^1.2.2",
+    "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-vue": "^2.0.2",
@@ -53,11 +55,15 @@
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "jest-snapshot": "^27.3.1",
+    "jest-vue-preprocessor": "^1.7.1",
+    "js-beautify": "^1.14.0",
     "jsdoc": "^3.6.7",
     "jsdoc-to-markdown": "^7.1.0",
     "mocha": "^9.1.3",
     "moxios": "^0.4.0",
+    "purgecss": "^4.0.3",
     "sinon": "^12.0.1",
+    "stream": "^0.0.2",
     "style-loader": "^3.3.1",
     "vue-loader": "^15.9.8",
     "vue-style-loader": "^4.1.3",
