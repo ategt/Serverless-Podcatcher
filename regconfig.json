@@ -11,7 +11,7 @@
   },
   "plugins": {
   	"reg-simple-keygen-plugin": {
-      "expectedKey": "${TARGET_GIT_COMMIT}",
+      "expectedKey": "PUBLISHED-LAST",
       "actualKey": "${GIT_COMMIT}"
     },
     "reg-publish-filesystem-plugin": {
