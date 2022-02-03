@@ -14,13 +14,13 @@
       "expectedKey": "PUBLISHED-LAST",
       "actualKey": "${GIT_COMMIT}"
     },
-    "reg-publish-filesystem-plugin": {
-	  "bucketName": "bucketName",
-	  "acl": "acl",
-	  "sse": "sse",
-	  "sseKMSKeyId": "sseKMSKeyId",
-	  "customDomain": "customDomain",
-	  "pathPrefix": "pathPrefix"
-	}
+    "reg-publish-file-system-plugin": {
+  	  "bucketName": "bucketName",
+  	  "acl": "acl",
+  	  "sse": "sse",
+  	  "sseKMSKeyId": "sseKMSKeyId",
+  	  "customDomain": "customDomain",
+  	  "pathPrefix": "pathPrefix"
+  	}
   }
 }
